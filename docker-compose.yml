@@ -3,10 +3,18 @@ services:
   shibboleth-sp:
     build: ./shibboleth-sp/
     ports:
-     - "80:80"
      - "443:443"
     volumes:
     # MAPPING
     # host directory:container directory
      - ./shibboleth-sp/localcerts:/etc/ssl/localcerts
      - ./shibboleth-sp/sites-available:/etc/apache2/sites-available
+  ilias-sp:
+    build: ./ilias-sp/
+    ports:
+     - "80:80"
+    volumes:
+    # MAPPING
+    # host directory:container directory
+     - ./ilias-sp/sites-enabled:/etc/apache2/sites-enabled
+     - ./ilias-sp/php5/php.ini:/etc/php5/apache2/php.ini
