@@ -1,0 +1,12 @@
+version: '2'
+services:
+  shibboleth-sp:
+    build: ./shibboleth-sp/
+    ports:
+     - "80:80"
+     - "443:443"
+    volumes:
+    # MAPPING
+    # host directory:container directory
+     - ./shibboleth-sp/localcerts:/etc/ssl/localcerts
+     - ./shibboleth-sp/sites-available:/etc/apache2/sites-available
