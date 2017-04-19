@@ -18,3 +18,21 @@ services:
     # host directory:container directory
      - ./ilias-sp/sites-enabled:/etc/apache2/sites-enabled
      - ./ilias-sp/php5/php.ini:/etc/php5/apache2/php.ini
+     - ./ilias-sp/iliasdata:/home/www-data/iliasdata
+     - ./ilias-sp/iliaslog:/var/log/iliaslog
+  mysql-db:
+    image: mysql:5.7
+    ports:
+     - "3306:3306"
+    volumes:
+    # MAPPING
+    # host directory:container directory
+     - ./mysql-db/iliasdb:/var/lib/mysql
+    environment:
+     MYSQL_DATABASE: ilias
+     MYSQL_USER: ilias
+     MYSQL_PASSWORD: secret
+     MYSQL_ROOT_PASSWORD: root
+     MYSQL_ROOT_HOST: "%"
+    command: --character-set-server=utf8 --collation-server=utf8_unicode_ci --max-connections=200 --query-cache-size=32MB --max-allowed-packet=500M
+    restart: always
