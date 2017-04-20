@@ -39,10 +39,12 @@ RUN cd /var/www/html/ \
 RUN chown www-data:www-data /var/www/html/ilias -R
 
 # Data-Diretory ausserhalb vom Webverzeichnis + freigeben
-RUN mkdir -p /home/www-data/iliasdata && chown www-data:www-data /home/www-data -R
+RUN mkdir -p /home/www-data/iliasdata
+RUN chown www-data:www-data -R /home/www-data
 
 # Log-Diretory anlegen + freigeben
-RUN mkdir /var/log/iliaslog && chown www-data:www-data /var/log/iliaslog -R
+RUN mkdir /var/log/iliaslog
+RUN chown www-data:www-data -R /var/log/iliaslog
 
 # Apache als Vordergrungprozess starten
 ENTRYPOINT [ "/usr/sbin/apache2", "-DFOREGROUND" ]

@@ -4,6 +4,7 @@ services:
     build: ./shibboleth-sp/
     ports:
      - "443:443"
+     - "80:80"
     volumes:
     # MAPPING
     # host directory:container directory
@@ -12,7 +13,8 @@ services:
   ilias-sp:
     build: ./ilias-sp/
     ports:
-     - "80:80"
+    # Nur zum debuggen
+     - "81:80"
     volumes:
     # MAPPING
     # host directory:container directory
