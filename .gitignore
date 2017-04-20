@@ -4,6 +4,8 @@
 
 ilias-sp/iliasdata/  
 ilias-sp/iliaslog/
+si-sp/iliasdata/
+si-sp/iliaslog/
 mysql-db/iliasdb/
 
 # #############################################

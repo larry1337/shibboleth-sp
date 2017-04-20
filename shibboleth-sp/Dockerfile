@@ -30,6 +30,11 @@ RUN chmod 600 /etc/ssl/localcerts
 # Apache2 TLS-MODUL aktivieren
 RUN a2enmod ssl
 
+# Weiterleitung aktivieren
+RUN a2enmod proxy 
+RUN a2enmod proxy_http 
+
+
 # Virtueller Host aktivieren
 RUN a2ensite default-ssl
 
