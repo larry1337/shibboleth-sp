@@ -62,6 +62,9 @@ RUN echo 'deb http://pkg.switch.ch/switchaai/debian jessie main' | tee /etc/apt/
 # Shibboleth Service-Provider installieren
 RUN apt-get install -y --install-recommends shibboleth
 
+# Owner für Verzeichnis auf _shibd ändern
+RUN chown -R _shibd:_shibd /etc/shibboleth/
+
 # ###################################################################### #
 #                             SETUP FÜR ILIAS                
 # ###################################################################### #
