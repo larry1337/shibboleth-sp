@@ -20,7 +20,7 @@
     -->
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
-    <ApplicationDefaults entityID="https://sp.example.org/shibboleth"
+    <ApplicationDefaults entityID="sp-lr.shib"
                          REMOTE_USER="eppn persistent-id targeted-id"
                          cipherSuites="ECDHE+AESGCM:ECDHE:!aNULL:!eNULL:!LOW:!EXPORT:!RC4:!SHA:!SSLv2">
 
@@ -48,7 +48,7 @@
             </SSO>
 	    -->
 
-	    <SSO entityID="https://192.168.1.109/idp/shibboleth"
+	    <SSO entityID="idp-db.shib"
                   discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
                   SAML2 SAML1
             </SSO>
@@ -91,7 +91,7 @@
         </MetadataProvider>
         -->
 
-        <MetadataProvider type="XML" uri="https://JDOE/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
+        <MetadataProvider type="XML" uri="https://idp-db.shib/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
 
         <!-- Example of locally maintained metadata. -->
         <!--

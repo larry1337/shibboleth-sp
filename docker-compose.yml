@@ -1,6 +1,7 @@
 version: '2'
 services:
   si-sp:
+    container_name: "shibsp"
     build: ./si-sp/
     ports:
      - "443:443"
@@ -13,7 +14,8 @@ services:
     # - ./si-sp/sites-available:/etc/apache2/sites-available
      - ./si-sp/shibboleth-config/shibboleth2.xml:/etc/shibboleth/shibboleth2.xml 
      - ./si-sp/shibboleth-config/attribute-map.xml:/etc/shibboleth/attribute-map.xml
-    # MAPPING FOR ILIAS
+     - ./si-sp/shibboleth-logs:/var/log/shibboleth 
+   # MAPPING FOR ILIAS
      - ./si-sp/sites-enabled:/etc/apache2/sites-enabled
      - ./si-sp/php5/php.ini:/etc/php5/apache2/php.ini
      - ./si-sp/iliasdata:/home/www-data/iliasdata

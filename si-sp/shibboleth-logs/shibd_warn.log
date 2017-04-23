@@ -1,0 +1,9 @@
+2017-04-23 17:15:55 WARN Shibboleth.Application : insecure cookieProps setting, set to "https" for SSL/TLS-only usage
+2017-04-23 17:15:55 WARN Shibboleth.Application : handlerSSL should be enabled for SSL/TLS-enabled web sites
+2017-04-23 17:15:57 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to resolve host/address 'https://idp-db.shib/idp/shibboleth'
+2017-04-23 17:15:57 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (https://idp-db.shib/idp/shibboleth): XML error(s) during parsing, check log for specifics
+2017-04-23 17:15:57 WARN OpenSAML.MetadataProvider.XML : adjusted reload interval to 600 seconds
+2017-04-23 17:15:57 WARN OpenSAML.MetadataProvider.XML : trying backup file, exception loading remote resource: XML error(s) during parsing, check log for specifics
+2017-04-23 17:15:57 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to open primary document entity '/etc/shibboleth/metadata/metadata.xml'
+2017-04-23 17:15:57 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (/etc/shibboleth/metadata/metadata.xml): XML error(s) during parsing, check log for specifics
+2017-04-23 17:15:57 CRIT Shibboleth.Application : error initializing MetadataProvider: XML error(s) during parsing, check log for specifics

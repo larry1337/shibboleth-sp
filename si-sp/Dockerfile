@@ -23,7 +23,8 @@ php5 \
 libapache2-mod-php5 \
 ntp \
 curl \
-openssl
+openssl \
+nano
 
 # Zertifikat-Ordner anlegen und freigeben
 RUN mkdir -p /etc/ssl/localcerts
@@ -61,6 +62,9 @@ RUN echo 'deb http://pkg.switch.ch/switchaai/debian jessie main' | tee /etc/apt/
 
 # Shibboleth Service-Provider installieren
 RUN apt-get install -y --install-recommends shibboleth
+
+# Verzeichnis für Metadata Backing-Path
+RUN mkdir /etc/shibboleth/metadata
 
 # Owner für Verzeichnis auf _shibd ändern
 RUN chown -R _shibd:_shibd /etc/shibboleth/
