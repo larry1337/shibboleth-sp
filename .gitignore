@@ -6,6 +6,7 @@ ilias-sp/iliasdata/
 ilias-sp/iliaslog/
 si-sp/iliasdata/
 si-sp/iliaslog/
+si-sp/shibboleth-logs/
 mysql-db/iliasdb/
 
 # #############################################
