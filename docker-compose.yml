@@ -20,6 +20,9 @@ services:
      - ./si-sp/php5/php.ini:/etc/php5/apache2/php.ini
      - ./si-sp/iliasdata:/home/www-data/iliasdata
      - ./si-sp/iliaslog:/var/log/iliaslog
+   # TO KEEP ILIAS INSTALLATION
+     - ./si-sp/ilias-config/ilias.ini.php:/var/www/html/ilias/ilias.ini.php
+     - ./si-sp/ilias-clientdata:/var/www/html/ilias/data/ilias
   mysql-db:
     image: mysql:5.7
     ports:

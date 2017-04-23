@@ -154,3 +154,755 @@
 2017-04-23 17:20:15 INFO XMLTooling.Config : xmltooling 1.6.0 library shutdown complete
 2017-04-23 17:20:15 INFO OpenSAML.Config : opensaml 2.6.0 library shutdown complete
 2017-04-23 17:20:15 INFO Shibboleth.Config : shibboleth 2.6.0 library shutdown complete
+2017-04-23 17:24:55 INFO XMLTooling.Config : xmltooling 1.6.0 library initialization complete
+2017-04-23 17:24:55 INFO OpenSAML.Config : opensaml 2.6.0 library initialization complete
+2017-04-23 17:24:55 INFO Shibboleth.Config : shibboleth 2.6.0 library initialization complete
+2017-04-23 17:24:55 INFO Shibboleth.Config : reload thread started...running when signaled
+2017-04-23 17:24:55 INFO Shibboleth.Config : loaded XML resource (/etc/shibboleth/shibboleth2.xml)
+2017-04-23 17:24:55 INFO Shibboleth.Config : Shibboleth SP Version 2.6.0
+2017-04-23 17:24:55 INFO Shibboleth.Config : Library versions: log4shib 1.0.9, Xerces-C 3.1.1, XML-Security-C 1.7.3, XMLTooling-C 1.6.0, OpenSAML-C 2.6.0, Shibboleth 1.6.0
+2017-04-23 17:24:55 INFO Shibboleth.Config : building ListenerService of type UnixListener...
+2017-04-23 17:24:55 INFO Shibboleth.Listener : using socket address: shibd.sock
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (set::RelayState)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (get::RelayState)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (set::PostData)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (get::PostData)
+2017-04-23 17:24:55 INFO Shibboleth.Config : no StorageService plugin(s) installed, using (mem) in-memory instance
+2017-04-23 17:24:55 INFO Shibboleth.Config : no ReplayCache specified, using arbitrary StorageService instance
+2017-04-23 17:24:55 INFO Shibboleth.Config : no ArtifactMap specified, building in-memory ArtifactMap...
+2017-04-23 17:24:55 INFO Shibboleth.Config : no SessionCache specified, using StorageService-backed instance
+2017-04-23 17:24:55 INFO Shibboleth.SessionCache : bound to arbitrary StorageService
+2017-04-23 17:24:55 INFO Shibboleth.SessionCache : StorageService for 'lite' use not set, using standard StorageService
+2017-04-23 17:24:55 INFO XMLTooling.StorageService : cleanup thread started...running every 900 seconds
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 17:24:55 INFO Shibboleth.Config : building SecurityPolicyProvider of type XML...
+2017-04-23 17:24:55 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread started...running when signaled
+2017-04-23 17:24:55 INFO Shibboleth.SecurityPolicyProvider.XML : loaded XML resource (/etc/shibboleth/security-policy.xml)
+2017-04-23 17:24:55 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:24:55 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:24:55 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:24:55 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:24:55 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:24:55 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#rsa-md5)
+2017-04-23 17:24:55 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#md5)
+2017-04-23 17:24:55 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmlenc#rsa-1_5)
+2017-04-23 17:24:55 INFO Shibboleth.Config : building ProtocolProvider of type XML...
+2017-04-23 17:24:55 INFO Shibboleth.ProtocolProvider.XML : loaded XML resource (/etc/shibboleth/protocols.xml)
+2017-04-23 17:24:55 WARN Shibboleth.Application : insecure cookieProps setting, set to "https" for SSL/TLS-only usage
+2017-04-23 17:24:55 WARN Shibboleth.Application : handlerSSL should be enabled for SSL/TLS-enabled web sites
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML2)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding SessionInitiator of type (SAML2) to chain (/Login)
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring ArtifactResolution endpoints for protocol (SAML2)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding ArtifactResolutionService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/Artifact/SOAP)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML2)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SAML2/POST)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign) at (/SAML2/POST-SimpleSign)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SAML2/Artifact)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:PAOS) at (/SAML2/ECP)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML1)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding SessionInitiator of type (Shib1) to chain (/Login)
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML1)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:browser-post) at (/SAML/POST)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/POST)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:artifact-01) at (/SAML/Artifact)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding SessionInitiator of type (SAMLDS) to chain (/Login)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (SAML2)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding LogoutInitiator of type (SAML2) to chain (/Logout)
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring Logout endpoints for protocol (SAML2)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/SLO/SOAP)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect) at (/SLO/Redirect)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SLO/POST)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/POST)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SLO/Artifact)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 17:24:55 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (Local)
+2017-04-23 17:24:55 INFO Shibboleth.Application : adding LogoutInitiator of type (Local) to chain (/Logout)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/Metadata)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/Status)
+2017-04-23 17:24:55 INFO Shibboleth.Listener : registered remoted message endpoint (default/DiscoFeed)
+2017-04-23 17:24:55 INFO Shibboleth.DiscoveryFeed : feed files will be cached in /var/cache/shibboleth/
+2017-04-23 17:24:55 INFO Shibboleth.Application : building MetadataProvider of type XML...
+2017-04-23 17:24:57 INFO OpenSAML.MetadataProvider.XML : loaded XML resource (https://idp-db.shib/idp/shibboleth)
+2017-04-23 17:24:57 INFO OpenSAML.MetadataProvider.XML : adjusted reload interval to 7200 seconds
+2017-04-23 17:24:57 INFO Shibboleth.Application : no TrustEngine specified or installed, using default chain {ExplicitKey, PKIX}
+2017-04-23 17:24:57 INFO OpenSAML.MetadataProvider.XML : reload thread started...running every 7200 seconds
+2017-04-23 17:24:57 INFO Shibboleth.Application : building AttributeExtractor of type XML...
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : loaded XML resource (/etc/shibboleth/attribute-map.xml)
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.6
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonPrincipalName
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.9
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonScopedAffiliation
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.1
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonAffiliation
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.7
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonEntitlement
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonTargetedID
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.10
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:uid
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.1
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:givenName
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.42
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:sn
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.4
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:mail
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.3
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:street
+2017-04-23 17:24:57 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.9
+2017-04-23 17:24:57 INFO Shibboleth.Application : building AttributeFilter of type XML...
+2017-04-23 17:24:57 INFO Shibboleth.AttributeFilter : reload thread started...running when signaled
+2017-04-23 17:24:57 INFO Shibboleth.AttributeFilter : loaded XML resource (/etc/shibboleth/attribute-policy.xml)
+2017-04-23 17:24:57 INFO Shibboleth.Application : building AttributeResolver of type Query...
+2017-04-23 17:24:57 INFO Shibboleth.Application : building CredentialResolver of type File...
+2017-04-23 17:24:57 INFO XMLTooling.SecurityHelper : loading private key from file (/etc/ssl/localcerts/apache.key)
+2017-04-23 17:24:57 INFO XMLTooling.SecurityHelper : loading certificate(s) from file (/etc/ssl/localcerts/apache.pem)
+2017-04-23 17:24:57 INFO Shibboleth.Listener : registered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 17:24:57 INFO Shibboleth.Listener : listener service starting
+2017-04-23 17:36:21 INFO Shibboleth.Listener : listener service shutting down
+2017-04-23 17:36:21 INFO Shibboleth.Listener [1]: detected socket closure, shutting down worker thread
+2017-04-23 17:36:21 INFO Shibboleth.Config : shibboleth 2.6.0 library shutting down
+2017-04-23 17:36:21 INFO Shibboleth.Config : reload thread finished
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/POST)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/POST)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Metadata)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Status)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/DiscoFeed)
+2017-04-23 17:36:21 INFO Shibboleth.AttributeFilter : reload thread finished
+2017-04-23 17:36:21 INFO OpenSAML.MetadataProvider.XML : reload thread finished
+2017-04-23 17:36:21 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread finished
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 17:36:21 INFO Shibboleth.Listener : unregistered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 17:36:21 INFO XMLTooling.StorageService : cleanup thread finished
+2017-04-23 17:36:21 INFO XMLTooling.Config : xmltooling 1.6.0 library shutdown complete
+2017-04-23 17:36:21 INFO OpenSAML.Config : opensaml 2.6.0 library shutdown complete
+2017-04-23 17:36:21 INFO Shibboleth.Config : shibboleth 2.6.0 library shutdown complete
+2017-04-23 17:36:30 INFO XMLTooling.Config : xmltooling 1.6.0 library initialization complete
+2017-04-23 17:36:30 INFO OpenSAML.Config : opensaml 2.6.0 library initialization complete
+2017-04-23 17:36:30 INFO Shibboleth.Config : shibboleth 2.6.0 library initialization complete
+2017-04-23 17:36:30 INFO Shibboleth.Config : reload thread started...running when signaled
+2017-04-23 17:36:30 INFO Shibboleth.Config : loaded XML resource (/etc/shibboleth/shibboleth2.xml)
+2017-04-23 17:36:30 INFO Shibboleth.Config : Shibboleth SP Version 2.6.0
+2017-04-23 17:36:30 INFO Shibboleth.Config : Library versions: log4shib 1.0.9, Xerces-C 3.1.1, XML-Security-C 1.7.3, XMLTooling-C 1.6.0, OpenSAML-C 2.6.0, Shibboleth 1.6.0
+2017-04-23 17:36:30 INFO Shibboleth.Config : building ListenerService of type UnixListener...
+2017-04-23 17:36:30 INFO Shibboleth.Listener : using socket address: shibd.sock
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (set::RelayState)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (get::RelayState)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (set::PostData)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (get::PostData)
+2017-04-23 17:36:30 INFO Shibboleth.Config : no StorageService plugin(s) installed, using (mem) in-memory instance
+2017-04-23 17:36:30 INFO Shibboleth.Config : no ReplayCache specified, using arbitrary StorageService instance
+2017-04-23 17:36:30 INFO Shibboleth.Config : no ArtifactMap specified, building in-memory ArtifactMap...
+2017-04-23 17:36:30 INFO XMLTooling.StorageService : cleanup thread started...running every 900 seconds
+2017-04-23 17:36:30 INFO Shibboleth.Config : no SessionCache specified, using StorageService-backed instance
+2017-04-23 17:36:30 INFO Shibboleth.SessionCache : bound to arbitrary StorageService
+2017-04-23 17:36:30 INFO Shibboleth.SessionCache : StorageService for 'lite' use not set, using standard StorageService
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 17:36:30 INFO Shibboleth.Config : building SecurityPolicyProvider of type XML...
+2017-04-23 17:36:30 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread started...running when signaled
+2017-04-23 17:36:30 INFO Shibboleth.SecurityPolicyProvider.XML : loaded XML resource (/etc/shibboleth/security-policy.xml)
+2017-04-23 17:36:30 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:36:30 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:36:30 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:36:30 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:36:30 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:36:30 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#rsa-md5)
+2017-04-23 17:36:30 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#md5)
+2017-04-23 17:36:30 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmlenc#rsa-1_5)
+2017-04-23 17:36:30 INFO Shibboleth.Config : building ProtocolProvider of type XML...
+2017-04-23 17:36:30 INFO Shibboleth.ProtocolProvider.XML : loaded XML resource (/etc/shibboleth/protocols.xml)
+2017-04-23 17:36:30 WARN Shibboleth.Application : insecure cookieProps setting, set to "https" for SSL/TLS-only usage
+2017-04-23 17:36:30 WARN Shibboleth.Application : handlerSSL should be enabled for SSL/TLS-enabled web sites
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML2)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding SessionInitiator of type (SAML2) to chain (/Login)
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring ArtifactResolution endpoints for protocol (SAML2)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding ArtifactResolutionService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/Artifact/SOAP)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML2)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SAML2/POST)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign) at (/SAML2/POST-SimpleSign)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SAML2/Artifact)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:PAOS) at (/SAML2/ECP)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML1)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding SessionInitiator of type (Shib1) to chain (/Login)
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML1)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:browser-post) at (/SAML/POST)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/POST)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:artifact-01) at (/SAML/Artifact)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding SessionInitiator of type (SAMLDS) to chain (/Login)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (SAML2)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding LogoutInitiator of type (SAML2) to chain (/Logout)
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring Logout endpoints for protocol (SAML2)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/SLO/SOAP)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect) at (/SLO/Redirect)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SLO/POST)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/POST)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SLO/Artifact)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 17:36:30 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (Local)
+2017-04-23 17:36:30 INFO Shibboleth.Application : adding LogoutInitiator of type (Local) to chain (/Logout)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/Metadata)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/Status)
+2017-04-23 17:36:30 INFO Shibboleth.Listener : registered remoted message endpoint (default/DiscoFeed)
+2017-04-23 17:36:30 INFO Shibboleth.DiscoveryFeed : feed files will be cached in /var/cache/shibboleth/
+2017-04-23 17:36:30 INFO Shibboleth.Application : building MetadataProvider of type XML...
+2017-04-23 17:36:32 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to resolve host/address 'https://idp-db.shib/idp/shibboleth'
+2017-04-23 17:36:32 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (https://idp-db.shib/idp/shibboleth): XML error(s) during parsing, check log for specifics
+2017-04-23 17:36:32 WARN OpenSAML.MetadataProvider.XML : adjusted reload interval to 600 seconds
+2017-04-23 17:36:32 WARN OpenSAML.MetadataProvider.XML : trying backup file, exception loading remote resource: XML error(s) during parsing, check log for specifics
+2017-04-23 17:36:32 INFO OpenSAML.MetadataProvider.XML : using local backup of remote resource
+2017-04-23 17:36:32 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to open primary document entity '/etc/shibboleth/metadata/metadata.xml'
+2017-04-23 17:36:32 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (/etc/shibboleth/metadata/metadata.xml): XML error(s) during parsing, check log for specifics
+2017-04-23 17:36:32 CRIT Shibboleth.Application : error initializing MetadataProvider: XML error(s) during parsing, check log for specifics
+2017-04-23 17:36:32 INFO Shibboleth.Application : no TrustEngine specified or installed, using default chain {ExplicitKey, PKIX}
+2017-04-23 17:36:32 INFO OpenSAML.MetadataProvider.XML : reload thread started...running every 600 seconds
+2017-04-23 17:36:32 INFO Shibboleth.Application : building AttributeExtractor of type XML...
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : loaded XML resource (/etc/shibboleth/attribute-map.xml)
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.6
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonPrincipalName
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.9
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonScopedAffiliation
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.1
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonAffiliation
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.7
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonEntitlement
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonTargetedID
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.10
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:uid
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.1
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:givenName
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.42
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:sn
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.4
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:mail
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.3
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:street
+2017-04-23 17:36:32 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.9
+2017-04-23 17:36:32 INFO Shibboleth.Application : building AttributeFilter of type XML...
+2017-04-23 17:36:32 INFO Shibboleth.AttributeFilter : reload thread started...running when signaled
+2017-04-23 17:36:32 INFO Shibboleth.AttributeFilter : loaded XML resource (/etc/shibboleth/attribute-policy.xml)
+2017-04-23 17:36:32 INFO Shibboleth.Application : building AttributeResolver of type Query...
+2017-04-23 17:36:32 INFO Shibboleth.Application : building CredentialResolver of type File...
+2017-04-23 17:36:32 INFO XMLTooling.SecurityHelper : loading private key from file (/etc/ssl/localcerts/apache.key)
+2017-04-23 17:36:32 INFO XMLTooling.SecurityHelper : loading certificate(s) from file (/etc/ssl/localcerts/apache.pem)
+2017-04-23 17:36:32 INFO Shibboleth.Listener : registered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 17:36:32 INFO Shibboleth.Listener : listener service starting
+2017-04-23 17:37:31 INFO Shibboleth.Listener : listener service shutting down
+2017-04-23 17:37:31 INFO Shibboleth.Config : shibboleth 2.6.0 library shutting down
+2017-04-23 17:37:31 INFO Shibboleth.Config : reload thread finished
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/POST)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/POST)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Metadata)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Status)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/DiscoFeed)
+2017-04-23 17:37:31 INFO Shibboleth.AttributeFilter : reload thread finished
+2017-04-23 17:37:31 INFO OpenSAML.MetadataProvider.XML : reload thread finished
+2017-04-23 17:37:31 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread finished
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 17:37:31 INFO Shibboleth.Listener : unregistered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 17:37:31 INFO XMLTooling.StorageService : cleanup thread finished
+2017-04-23 17:37:31 INFO XMLTooling.Config : xmltooling 1.6.0 library shutdown complete
+2017-04-23 17:37:31 INFO OpenSAML.Config : opensaml 2.6.0 library shutdown complete
+2017-04-23 17:37:31 INFO Shibboleth.Config : shibboleth 2.6.0 library shutdown complete
+2017-04-23 17:38:10 INFO XMLTooling.Config : xmltooling 1.6.0 library initialization complete
+2017-04-23 17:38:10 INFO OpenSAML.Config : opensaml 2.6.0 library initialization complete
+2017-04-23 17:38:10 INFO Shibboleth.Config : shibboleth 2.6.0 library initialization complete
+2017-04-23 17:38:10 INFO Shibboleth.Config : reload thread started...running when signaled
+2017-04-23 17:38:10 INFO Shibboleth.Config : loaded XML resource (/etc/shibboleth/shibboleth2.xml)
+2017-04-23 17:38:10 INFO Shibboleth.Config : Shibboleth SP Version 2.6.0
+2017-04-23 17:38:10 INFO Shibboleth.Config : Library versions: log4shib 1.0.9, Xerces-C 3.1.1, XML-Security-C 1.7.3, XMLTooling-C 1.6.0, OpenSAML-C 2.6.0, Shibboleth 1.6.0
+2017-04-23 17:38:10 INFO Shibboleth.Config : building ListenerService of type UnixListener...
+2017-04-23 17:38:10 INFO Shibboleth.Listener : using socket address: shibd.sock
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (set::RelayState)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (get::RelayState)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (set::PostData)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (get::PostData)
+2017-04-23 17:38:10 INFO Shibboleth.Config : no StorageService plugin(s) installed, using (mem) in-memory instance
+2017-04-23 17:38:10 INFO Shibboleth.Config : no ReplayCache specified, using arbitrary StorageService instance
+2017-04-23 17:38:10 INFO Shibboleth.Config : no ArtifactMap specified, building in-memory ArtifactMap...
+2017-04-23 17:38:10 INFO XMLTooling.StorageService : cleanup thread started...running every 900 seconds
+2017-04-23 17:38:10 INFO Shibboleth.Config : no SessionCache specified, using StorageService-backed instance
+2017-04-23 17:38:10 INFO Shibboleth.SessionCache : bound to arbitrary StorageService
+2017-04-23 17:38:10 INFO Shibboleth.SessionCache : StorageService for 'lite' use not set, using standard StorageService
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 17:38:10 INFO Shibboleth.Config : building SecurityPolicyProvider of type XML...
+2017-04-23 17:38:10 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread started...running when signaled
+2017-04-23 17:38:10 INFO Shibboleth.SecurityPolicyProvider.XML : loaded XML resource (/etc/shibboleth/security-policy.xml)
+2017-04-23 17:38:10 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:38:10 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:38:10 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:38:10 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:38:10 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:38:10 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#rsa-md5)
+2017-04-23 17:38:10 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#md5)
+2017-04-23 17:38:10 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmlenc#rsa-1_5)
+2017-04-23 17:38:10 INFO Shibboleth.Config : building ProtocolProvider of type XML...
+2017-04-23 17:38:10 INFO Shibboleth.ProtocolProvider.XML : loaded XML resource (/etc/shibboleth/protocols.xml)
+2017-04-23 17:38:10 WARN Shibboleth.Application : insecure cookieProps setting, set to "https" for SSL/TLS-only usage
+2017-04-23 17:38:10 WARN Shibboleth.Application : handlerSSL should be enabled for SSL/TLS-enabled web sites
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML2)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding SessionInitiator of type (SAML2) to chain (/Login)
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring ArtifactResolution endpoints for protocol (SAML2)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding ArtifactResolutionService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/Artifact/SOAP)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML2)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SAML2/POST)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign) at (/SAML2/POST-SimpleSign)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SAML2/Artifact)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:PAOS) at (/SAML2/ECP)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML1)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding SessionInitiator of type (Shib1) to chain (/Login)
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML1)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:browser-post) at (/SAML/POST)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/POST)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:artifact-01) at (/SAML/Artifact)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding SessionInitiator of type (SAMLDS) to chain (/Login)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (SAML2)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding LogoutInitiator of type (SAML2) to chain (/Logout)
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring Logout endpoints for protocol (SAML2)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/SLO/SOAP)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect) at (/SLO/Redirect)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SLO/POST)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/POST)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SLO/Artifact)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 17:38:10 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (Local)
+2017-04-23 17:38:10 INFO Shibboleth.Application : adding LogoutInitiator of type (Local) to chain (/Logout)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/Metadata)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/Status)
+2017-04-23 17:38:10 INFO Shibboleth.Listener : registered remoted message endpoint (default/DiscoFeed)
+2017-04-23 17:38:10 INFO Shibboleth.DiscoveryFeed : feed files will be cached in /var/cache/shibboleth/
+2017-04-23 17:38:10 INFO Shibboleth.Application : building MetadataProvider of type XML...
+2017-04-23 17:38:12 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to resolve host/address 'https://idp-db.shib/idp/shibboleth'
+2017-04-23 17:38:12 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (https://idp-db.shib/idp/shibboleth): XML error(s) during parsing, check log for specifics
+2017-04-23 17:38:12 WARN OpenSAML.MetadataProvider.XML : adjusted reload interval to 600 seconds
+2017-04-23 17:38:12 WARN OpenSAML.MetadataProvider.XML : trying backup file, exception loading remote resource: XML error(s) during parsing, check log for specifics
+2017-04-23 17:38:12 INFO OpenSAML.MetadataProvider.XML : using local backup of remote resource
+2017-04-23 17:38:12 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to open primary document entity '/etc/shibboleth/metadata/metadata.xml'
+2017-04-23 17:38:12 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (/etc/shibboleth/metadata/metadata.xml): XML error(s) during parsing, check log for specifics
+2017-04-23 17:38:12 CRIT Shibboleth.Application : error initializing MetadataProvider: XML error(s) during parsing, check log for specifics
+2017-04-23 17:38:12 INFO Shibboleth.Application : no TrustEngine specified or installed, using default chain {ExplicitKey, PKIX}
+2017-04-23 17:38:12 INFO OpenSAML.MetadataProvider.XML : reload thread started...running every 600 seconds
+2017-04-23 17:38:12 INFO Shibboleth.Application : building AttributeExtractor of type XML...
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : loaded XML resource (/etc/shibboleth/attribute-map.xml)
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.6
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonPrincipalName
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.9
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonScopedAffiliation
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.1
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonAffiliation
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.7
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonEntitlement
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonTargetedID
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.10
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:uid
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.1
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:givenName
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.42
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:sn
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.4
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:mail
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.3
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:street
+2017-04-23 17:38:12 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.9
+2017-04-23 17:38:12 INFO Shibboleth.Application : building AttributeFilter of type XML...
+2017-04-23 17:38:12 INFO Shibboleth.AttributeFilter : reload thread started...running when signaled
+2017-04-23 17:38:12 INFO Shibboleth.AttributeFilter : loaded XML resource (/etc/shibboleth/attribute-policy.xml)
+2017-04-23 17:38:12 INFO Shibboleth.Application : building AttributeResolver of type Query...
+2017-04-23 17:38:12 INFO Shibboleth.Application : building CredentialResolver of type File...
+2017-04-23 17:38:12 INFO XMLTooling.SecurityHelper : loading private key from file (/etc/ssl/localcerts/apache.key)
+2017-04-23 17:38:12 INFO XMLTooling.SecurityHelper : loading certificate(s) from file (/etc/ssl/localcerts/apache.pem)
+2017-04-23 17:38:12 INFO Shibboleth.Listener : registered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 17:38:12 INFO Shibboleth.Listener : listener service starting
+2017-04-23 17:48:12 INFO OpenSAML.MetadataProvider.XML : reloading remote resource...
+2017-04-23 17:48:14 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to resolve host/address 'https://idp-db.shib/idp/shibboleth'
+2017-04-23 17:48:14 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (https://idp-db.shib/idp/shibboleth): XML error(s) during parsing, check log for specifics
+2017-04-23 17:48:14 WARN OpenSAML.MetadataProvider.XML : adjusted reload interval to 1200 seconds
+2017-04-23 17:48:14 WARN OpenSAML.MetadataProvider.XML : trying backup file, exception loading remote resource: XML error(s) during parsing, check log for specifics
+2017-04-23 17:48:14 INFO OpenSAML.MetadataProvider.XML : using local backup of remote resource
+2017-04-23 17:48:14 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to open primary document entity '/etc/shibboleth/metadata/metadata.xml'
+2017-04-23 17:48:14 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (/etc/shibboleth/metadata/metadata.xml): XML error(s) during parsing, check log for specifics
+2017-04-23 17:48:14 CRIT OpenSAML.MetadataProvider.XML : maintaining existing configuration, error reloading resource (https://idp-db.shib/idp/shibboleth): XML error(s) during parsing, check log for specifics
+2017-04-23 17:54:49 INFO Shibboleth.Listener : listener service shutting down
+2017-04-23 17:54:49 INFO Shibboleth.Config : shibboleth 2.6.0 library shutting down
+2017-04-23 17:54:49 INFO Shibboleth.Config : reload thread finished
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/POST)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/POST)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Metadata)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Status)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/DiscoFeed)
+2017-04-23 17:54:49 INFO Shibboleth.AttributeFilter : reload thread finished
+2017-04-23 17:54:49 INFO OpenSAML.MetadataProvider.XML : reload thread finished
+2017-04-23 17:54:49 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread finished
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 17:54:49 INFO Shibboleth.Listener : unregistered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 17:54:49 INFO XMLTooling.StorageService : cleanup thread finished
+2017-04-23 17:54:49 INFO XMLTooling.Config : xmltooling 1.6.0 library shutdown complete
+2017-04-23 17:54:49 INFO OpenSAML.Config : opensaml 2.6.0 library shutdown complete
+2017-04-23 17:54:49 INFO Shibboleth.Config : shibboleth 2.6.0 library shutdown complete
+2017-04-23 17:54:59 INFO XMLTooling.Config : xmltooling 1.6.0 library initialization complete
+2017-04-23 17:54:59 INFO OpenSAML.Config : opensaml 2.6.0 library initialization complete
+2017-04-23 17:54:59 INFO Shibboleth.Config : shibboleth 2.6.0 library initialization complete
+2017-04-23 17:54:59 INFO Shibboleth.Config : reload thread started...running when signaled
+2017-04-23 17:54:59 INFO Shibboleth.Config : loaded XML resource (/etc/shibboleth/shibboleth2.xml)
+2017-04-23 17:54:59 INFO Shibboleth.Config : Shibboleth SP Version 2.6.0
+2017-04-23 17:54:59 INFO Shibboleth.Config : Library versions: log4shib 1.0.9, Xerces-C 3.1.1, XML-Security-C 1.7.3, XMLTooling-C 1.6.0, OpenSAML-C 2.6.0, Shibboleth 1.6.0
+2017-04-23 17:54:59 INFO Shibboleth.Config : building ListenerService of type UnixListener...
+2017-04-23 17:54:59 INFO Shibboleth.Listener : using socket address: shibd.sock
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (set::RelayState)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (get::RelayState)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (set::PostData)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (get::PostData)
+2017-04-23 17:54:59 INFO Shibboleth.Config : no StorageService plugin(s) installed, using (mem) in-memory instance
+2017-04-23 17:54:59 INFO Shibboleth.Config : no ReplayCache specified, using arbitrary StorageService instance
+2017-04-23 17:54:59 INFO Shibboleth.Config : no ArtifactMap specified, building in-memory ArtifactMap...
+2017-04-23 17:54:59 INFO XMLTooling.StorageService : cleanup thread started...running every 900 seconds
+2017-04-23 17:54:59 INFO Shibboleth.Config : no SessionCache specified, using StorageService-backed instance
+2017-04-23 17:54:59 INFO Shibboleth.SessionCache : bound to arbitrary StorageService
+2017-04-23 17:54:59 INFO Shibboleth.SessionCache : StorageService for 'lite' use not set, using standard StorageService
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 17:54:59 INFO Shibboleth.Config : building SecurityPolicyProvider of type XML...
+2017-04-23 17:54:59 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread started...running when signaled
+2017-04-23 17:54:59 INFO Shibboleth.SecurityPolicyProvider.XML : loaded XML resource (/etc/shibboleth/security-policy.xml)
+2017-04-23 17:54:59 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:54:59 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 17:54:59 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:54:59 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:54:59 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 17:54:59 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#rsa-md5)
+2017-04-23 17:54:59 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#md5)
+2017-04-23 17:54:59 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmlenc#rsa-1_5)
+2017-04-23 17:54:59 INFO Shibboleth.Config : building ProtocolProvider of type XML...
+2017-04-23 17:54:59 INFO Shibboleth.ProtocolProvider.XML : loaded XML resource (/etc/shibboleth/protocols.xml)
+2017-04-23 17:54:59 WARN Shibboleth.Application : insecure cookieProps setting, set to "https" for SSL/TLS-only usage
+2017-04-23 17:54:59 WARN Shibboleth.Application : handlerSSL should be enabled for SSL/TLS-enabled web sites
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML2)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding SessionInitiator of type (SAML2) to chain (/Login)
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring ArtifactResolution endpoints for protocol (SAML2)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding ArtifactResolutionService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/Artifact/SOAP)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML2)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SAML2/POST)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign) at (/SAML2/POST-SimpleSign)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SAML2/Artifact)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:PAOS) at (/SAML2/ECP)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML1)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding SessionInitiator of type (Shib1) to chain (/Login)
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML1)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:browser-post) at (/SAML/POST)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/POST)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:artifact-01) at (/SAML/Artifact)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding SessionInitiator of type (SAMLDS) to chain (/Login)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (SAML2)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding LogoutInitiator of type (SAML2) to chain (/Logout)
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring Logout endpoints for protocol (SAML2)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/SLO/SOAP)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect) at (/SLO/Redirect)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SLO/POST)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/POST)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SLO/Artifact)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 17:54:59 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (Local)
+2017-04-23 17:54:59 INFO Shibboleth.Application : adding LogoutInitiator of type (Local) to chain (/Logout)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/Metadata)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/Status)
+2017-04-23 17:54:59 INFO Shibboleth.Listener : registered remoted message endpoint (default/DiscoFeed)
+2017-04-23 17:54:59 INFO Shibboleth.DiscoveryFeed : feed files will be cached in /var/cache/shibboleth/
+2017-04-23 17:54:59 INFO Shibboleth.Application : building MetadataProvider of type XML...
+2017-04-23 17:55:01 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to resolve host/address 'https://idp-db.shib/idp/shibboleth'
+2017-04-23 17:55:01 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (https://idp-db.shib/idp/shibboleth): XML error(s) during parsing, check log for specifics
+2017-04-23 17:55:01 WARN OpenSAML.MetadataProvider.XML : adjusted reload interval to 600 seconds
+2017-04-23 17:55:01 WARN OpenSAML.MetadataProvider.XML : trying backup file, exception loading remote resource: XML error(s) during parsing, check log for specifics
+2017-04-23 17:55:01 INFO OpenSAML.MetadataProvider.XML : using local backup of remote resource
+2017-04-23 17:55:01 ERROR XMLTooling.ParserPool : fatal error on line 0, column 0, message: unable to open primary document entity '/etc/shibboleth/metadata/metadata.xml'
+2017-04-23 17:55:01 ERROR OpenSAML.MetadataProvider.XML : error while loading resource (/etc/shibboleth/metadata/metadata.xml): XML error(s) during parsing, check log for specifics
+2017-04-23 17:55:01 CRIT Shibboleth.Application : error initializing MetadataProvider: XML error(s) during parsing, check log for specifics
+2017-04-23 17:55:01 INFO OpenSAML.MetadataProvider.XML : reload thread started...running every 600 seconds
+2017-04-23 17:55:01 INFO Shibboleth.Application : no TrustEngine specified or installed, using default chain {ExplicitKey, PKIX}
+2017-04-23 17:55:01 INFO Shibboleth.Application : building AttributeExtractor of type XML...
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : loaded XML resource (/etc/shibboleth/attribute-map.xml)
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.6
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonPrincipalName
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.9
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonScopedAffiliation
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.1
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonAffiliation
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.7
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonEntitlement
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonTargetedID
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.10
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:uid
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.1
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:givenName
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.42
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:sn
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.4
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:mail
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.3
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:street
+2017-04-23 17:55:01 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.9
+2017-04-23 17:55:01 INFO Shibboleth.Application : building AttributeFilter of type XML...
+2017-04-23 17:55:01 INFO Shibboleth.AttributeFilter : reload thread started...running when signaled
+2017-04-23 17:55:01 INFO Shibboleth.AttributeFilter : loaded XML resource (/etc/shibboleth/attribute-policy.xml)
+2017-04-23 17:55:01 INFO Shibboleth.Application : building AttributeResolver of type Query...
+2017-04-23 17:55:01 INFO Shibboleth.Application : building CredentialResolver of type File...
+2017-04-23 17:55:01 INFO XMLTooling.SecurityHelper : loading private key from file (/etc/ssl/localcerts/apache.key)
+2017-04-23 17:55:01 INFO XMLTooling.SecurityHelper : loading certificate(s) from file (/etc/ssl/localcerts/apache.pem)
+2017-04-23 17:55:01 INFO Shibboleth.Listener : registered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 17:55:01 INFO Shibboleth.Listener : listener service starting
+2017-04-23 17:55:11 WARN Shibboleth.SessionInitiator.SAML2 [1]: unable to locate metadata for provider (idp-db.shib)
+2017-04-23 17:55:16 WARN Shibboleth.SessionInitiator.SAML2 [2]: unable to locate metadata for provider (idp-db.shib)
+2017-04-23 17:55:44 WARN Shibboleth.SessionInitiator.SAML2 [3]: unable to locate metadata for provider (idp-db.shib)
+2017-04-23 18:02:37 INFO Shibboleth.Listener [3]: detected socket closure, shutting down worker thread
+2017-04-23 18:02:37 INFO Shibboleth.Listener : listener service shutting down
+2017-04-23 18:02:37 INFO Shibboleth.Listener [1]: detected socket closure, shutting down worker thread
+2017-04-23 18:02:37 INFO Shibboleth.Listener [2]: detected socket closure, shutting down worker thread
+2017-04-23 18:02:37 INFO Shibboleth.Config : shibboleth 2.6.0 library shutting down
+2017-04-23 18:02:37 INFO Shibboleth.Config : reload thread finished
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/POST)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/POST)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Metadata)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/Status)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (default/DiscoFeed)
+2017-04-23 18:02:37 INFO Shibboleth.AttributeFilter : reload thread finished
+2017-04-23 18:02:37 INFO OpenSAML.MetadataProvider.XML : reload thread finished
+2017-04-23 18:02:37 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread finished
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 18:02:37 INFO Shibboleth.Listener : unregistered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 18:02:37 INFO XMLTooling.StorageService : cleanup thread finished
+2017-04-23 18:02:37 INFO XMLTooling.Config : xmltooling 1.6.0 library shutdown complete
+2017-04-23 18:02:37 INFO OpenSAML.Config : opensaml 2.6.0 library shutdown complete
+2017-04-23 18:02:37 INFO Shibboleth.Config : shibboleth 2.6.0 library shutdown complete
+2017-04-23 18:03:52 INFO XMLTooling.Config : xmltooling 1.6.0 library initialization complete
+2017-04-23 18:03:52 INFO OpenSAML.Config : opensaml 2.6.0 library initialization complete
+2017-04-23 18:03:52 INFO Shibboleth.Config : shibboleth 2.6.0 library initialization complete
+2017-04-23 18:03:52 INFO Shibboleth.Config : reload thread started...running when signaled
+2017-04-23 18:03:52 INFO Shibboleth.Config : loaded XML resource (/etc/shibboleth/shibboleth2.xml)
+2017-04-23 18:03:52 INFO Shibboleth.Config : Shibboleth SP Version 2.6.0
+2017-04-23 18:03:52 INFO Shibboleth.Config : Library versions: log4shib 1.0.9, Xerces-C 3.1.1, XML-Security-C 1.7.3, XMLTooling-C 1.6.0, OpenSAML-C 2.6.0, Shibboleth 1.6.0
+2017-04-23 18:03:52 INFO Shibboleth.Config : building ListenerService of type UnixListener...
+2017-04-23 18:03:52 INFO Shibboleth.Listener : using socket address: shibd.sock
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (set::RelayState)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (get::RelayState)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (set::PostData)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (get::PostData)
+2017-04-23 18:03:52 INFO Shibboleth.Config : no StorageService plugin(s) installed, using (mem) in-memory instance
+2017-04-23 18:03:52 INFO Shibboleth.Config : no ReplayCache specified, using arbitrary StorageService instance
+2017-04-23 18:03:52 INFO Shibboleth.Config : no ArtifactMap specified, building in-memory ArtifactMap...
+2017-04-23 18:03:52 INFO XMLTooling.StorageService : cleanup thread started...running every 900 seconds
+2017-04-23 18:03:52 INFO Shibboleth.Config : no SessionCache specified, using StorageService-backed instance
+2017-04-23 18:03:52 INFO Shibboleth.SessionCache : bound to arbitrary StorageService
+2017-04-23 18:03:52 INFO Shibboleth.SessionCache : StorageService for 'lite' use not set, using standard StorageService
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (find::StorageService::SessionCache)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (remove::StorageService::SessionCache)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (touch::StorageService::SessionCache)
+2017-04-23 18:03:52 INFO Shibboleth.Config : building SecurityPolicyProvider of type XML...
+2017-04-23 18:03:52 INFO Shibboleth.SecurityPolicyProvider.XML : reload thread started...running when signaled
+2017-04-23 18:03:52 INFO Shibboleth.SecurityPolicyProvider.XML : loaded XML resource (/etc/shibboleth/security-policy.xml)
+2017-04-23 18:03:52 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 18:03:52 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Audience
+2017-04-23 18:03:52 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 18:03:52 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 18:03:52 INFO OpenSAML.SecurityPolicyRule.Conditions : building SecurityPolicyRule of type Ignore
+2017-04-23 18:03:52 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#rsa-md5)
+2017-04-23 18:03:52 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmldsig-more#md5)
+2017-04-23 18:03:52 INFO Shibboleth.Config : automatically blacklisting security algorithm (http://www.w3.org/2001/04/xmlenc#rsa-1_5)
+2017-04-23 18:03:52 INFO Shibboleth.Config : building ProtocolProvider of type XML...
+2017-04-23 18:03:52 INFO Shibboleth.ProtocolProvider.XML : loaded XML resource (/etc/shibboleth/protocols.xml)
+2017-04-23 18:03:52 WARN Shibboleth.Application : insecure cookieProps setting, set to "https" for SSL/TLS-only usage
+2017-04-23 18:03:52 WARN Shibboleth.Application : handlerSSL should be enabled for SSL/TLS-enabled web sites
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML2)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding SessionInitiator of type (SAML2) to chain (/Login)
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring ArtifactResolution endpoints for protocol (SAML2)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding ArtifactResolutionService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/Artifact/SOAP)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/Artifact/SOAP::run::SAML2Artifact)
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML2)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SAML2/POST)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign) at (/SAML2/POST-SimpleSign)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/POST-SimpleSign)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SAML2/Artifact)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/Artifact)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:PAOS) at (/SAML2/ECP)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML2/ECP)
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring SSO initiation for protocol (SAML1)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding SessionInitiator of type (Shib1) to chain (/Login)
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring SSO endpoints for protocol (SAML1)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:browser-post) at (/SAML/POST)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/POST)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding AssertionConsumerService for Binding (urn:oasis:names:tc:SAML:1.0:profiles:artifact-01) at (/SAML/Artifact)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SAML/Artifact)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding SessionInitiator of type (SAMLDS) to chain (/Login)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::SAML2SI)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/Login::run::Shib1SI)
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (SAML2)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding LogoutInitiator of type (SAML2) to chain (/Logout)
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring Logout endpoints for protocol (SAML2)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:SOAP) at (/SLO/SOAP)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/SOAP)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect) at (/SLO/Redirect)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Redirect)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST) at (/SLO/POST)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/POST)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding SingleLogoutService for Binding (urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact) at (/SLO/Artifact)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/SLO/Artifact)
+2017-04-23 18:03:52 INFO Shibboleth.Application : auto-configuring Logout initiation for protocol (Local)
+2017-04-23 18:03:52 INFO Shibboleth.Application : adding LogoutInitiator of type (Local) to chain (/Logout)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::SAML2LI)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/Logout::run::LocalLI)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/Metadata)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/Status)
+2017-04-23 18:03:52 INFO Shibboleth.Listener : registered remoted message endpoint (default/DiscoFeed)
+2017-04-23 18:03:52 INFO Shibboleth.DiscoveryFeed : feed files will be cached in /var/cache/shibboleth/
+2017-04-23 18:03:52 INFO Shibboleth.Application : building MetadataProvider of type XML...
+2017-04-23 18:03:54 INFO OpenSAML.MetadataProvider.XML : loaded XML resource (https://idp-db.shib/idp/shibboleth)
+2017-04-23 18:03:54 INFO OpenSAML.MetadataProvider.XML : adjusted reload interval to 7200 seconds
+2017-04-23 18:03:54 INFO Shibboleth.Application : no TrustEngine specified or installed, using default chain {ExplicitKey, PKIX}
+2017-04-23 18:03:54 INFO OpenSAML.MetadataProvider.XML : reload thread started...running every 7200 seconds
+2017-04-23 18:03:54 INFO Shibboleth.Application : building AttributeExtractor of type XML...
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : loaded XML resource (/etc/shibboleth/attribute-map.xml)
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.6
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonPrincipalName
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.9
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonScopedAffiliation
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.1
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonAffiliation
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.7
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonEntitlement
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:eduPersonTargetedID
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:1.3.6.1.4.1.5923.1.1.1.10
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:uid
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.1
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:givenName
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.42
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:sn
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.4
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:mail
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:0.9.2342.19200300.100.1.3
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:mace:dir:attribute-def:street
+2017-04-23 18:03:54 INFO Shibboleth.AttributeExtractor.XML : creating mapping for Attribute urn:oid:2.5.4.9
+2017-04-23 18:03:54 INFO Shibboleth.Application : building AttributeFilter of type XML...
+2017-04-23 18:03:54 INFO Shibboleth.AttributeFilter : reload thread started...running when signaled
+2017-04-23 18:03:54 INFO Shibboleth.AttributeFilter : loaded XML resource (/etc/shibboleth/attribute-policy.xml)
+2017-04-23 18:03:54 INFO Shibboleth.Application : building AttributeResolver of type Query...
+2017-04-23 18:03:54 INFO Shibboleth.Application : building CredentialResolver of type File...
+2017-04-23 18:03:54 INFO XMLTooling.SecurityHelper : loading private key from file (/etc/ssl/localcerts/apache.key)
+2017-04-23 18:03:54 INFO XMLTooling.SecurityHelper : loading certificate(s) from file (/etc/ssl/localcerts/apache.pem)
+2017-04-23 18:03:54 INFO Shibboleth.Listener : registered remoted message endpoint (default::getHeaders::Application)
+2017-04-23 18:03:54 INFO Shibboleth.Listener : listener service starting
