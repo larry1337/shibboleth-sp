@@ -91,7 +91,7 @@
         </MetadataProvider>
         -->
 
-        <MetadataProvider type="XML" uri="https://idp-db.shib/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
+        <MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
 
         <!-- Example of locally maintained metadata. -->
         <!--
@@ -109,8 +109,9 @@
 
         <!-- Simple file-based resolver for using a single keypair. -->
         <!-- <CredentialResolver type="File" key="sp-key.pem" certificate="sp-cert.pem"/> -->
-        <CredentialResolver type="File" key="/etc/ssl/localcerts/apache.key" certificate="/etc/ssl/localcerts/apache.pem"/>
-       
+	<!-- #<CredentialResolver type="File" key="/etc/ssl/localcerts/apache.key" certificate="/etc/ssl/localcerts/apache.pem"/> -->
+        <CredentialResolver type="File" key="/etc/ssl/localcerts/sp-certkey.key" certificate="/etc/ssl/localcerts/sp-cert.pem"/>
+
 	<!--
         The default settings can be overridden by creating ApplicationOverride elements (see
         the https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPApplicationOverride topic).
