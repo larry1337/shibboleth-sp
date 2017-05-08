@@ -112,6 +112,25 @@ RUN mkdir /var/log/iliaslog
 RUN chown www-data:www-data -R /var/log/iliaslog
 
 # ###################################################################### #
+#                  EMBEDDED DISCOVERY SERVICE INSTALLIEREN
+# ###################################################################### #
+
+# Neues Verzeichnis erstellen
+RUN cd /var/www/html && mkdir eds
+
+# Distribution runterladen, entpacken und in "eds"-Verzeichnis kopieren
+RUN cd /var/www/html/eds \
+&& curl -O https://shibboleth.net/downloads/embedded-discovery-service/latest/shibboleth-embedded-ds-1.2.0.tar.gz \
+&& tar -xvzf shibboleth-embedded-ds-1.2.0.tar.gz -C ./ \
+&& cd shibboleth-embedded-ds-1.2.0 \
+&& cp -rf . .. \
+&& cd /var/www/html/eds \
+&& rm shibboleth-embedded-ds-1.2.0.tar.gz 
+
+# Owner für Verzeichnis auf apache-user ändern
+RUN chown www-data:www-data -R /var/www/html/eds
+
+# ###################################################################### #
 #                           PID FILE ERROR
 # ###################################################################### #
 

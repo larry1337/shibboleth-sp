@@ -20,7 +20,7 @@
     -->
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
-    <ApplicationDefaults entityID="sp-lr.shib"
+    <ApplicationDefaults entityID="https://sp1.fed-lr.us"
                          REMOTE_USER="eppn persistent-id targeted-id"
                          cipherSuites="ECDHE+AESGCM:ECDHE:!aNULL:!eNULL:!LOW:!EXPORT:!RC4:!SHA:!SSLv2">
 
@@ -34,7 +34,7 @@
         security of your site. Stealing sessions via cookie theft is much easier with this disabled.
         -->
         <Sessions lifetime="28800" timeout="3600" relayState="ss:mem"
-                  checkAddress="false" handlerSSL="false" cookieProps="http">
+                  checkAddress="false" handlerSSL="false" cookieProps="https">
 
             <!--
             Configures SSO for a default IdP. To allow for >1 IdP, remove
@@ -48,10 +48,14 @@
             </SSO>
 	    -->
 
-	    <SSO entityID="idp-db.shib"
+	 <!--   <SSO entityID="https://idp1.fed-db.us/idp/shibboleth"
                   discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
                   SAML2 SAML1
-            </SSO>
+           </SSO> -->
+
+	<SSO discoveryProtocol="SAMLDS" discoveryURL="https://sp1.fed-lr.us/eds/">
+   		SAML2 SAML1
+	</SSO>
 
             <!-- SAML and local-only logout. -->
             <Logout>SAML2 Local</Logout>
@@ -91,7 +95,9 @@
         </MetadataProvider>
         -->
 
-        <MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
+       <!--  <MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider> -->
+
+       	<MetadataProvider type="XML" url="https://fed-db.us/idp/metadata/metadata-fed-db.xml" backingFilePath="/etc/shibboleth/metadata/metadata.xml"></MetadataProvider>
 
         <!-- Example of locally maintained metadata. -->
         <!--
