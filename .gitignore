@@ -7,7 +7,7 @@ ilias-sp/iliaslog/
 si-sp/iliasdata/
 si-sp/iliaslog/
 si-sp/shibboleth-logs/
-#si-sp/localcerts/
+si-sp/localcerts/
 mysql-db/iliasdb/
 certificates-federations/
 
