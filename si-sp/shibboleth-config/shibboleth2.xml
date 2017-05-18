@@ -34,7 +34,7 @@
         security of your site. Stealing sessions via cookie theft is much easier with this disabled.
         -->
         <Sessions lifetime="28800" timeout="3600" relayState="ss:mem"
-                  checkAddress="false" handlerSSL="false" cookieProps="https">
+                  checkAddress="false" handlerSSL="true" cookieProps="https">
 
             <!--
             Configures SSO for a default IdP. To allow for >1 IdP, remove
@@ -80,7 +80,15 @@
         <Errors supportContact="root@localhost"
             helpLocation="/about.html"
             styleSheet="/shibboleth-sp/main.css"/>
+
+	<!-- Chain the two built-in trust engines together. -->
+        <TrustEngine type="Chaining">
+            <TrustEngine type="ExplicitKey"/>
+            <TrustEngine type="PKIX"/>
+	</TrustEngine>
         
+
+
         <!-- Example of remotely supplied batch of signed metadata. -->
         <!--
         <MetadataProvider type="XML" validate="true"
@@ -97,7 +105,13 @@
 
        <!--  <MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider> -->
 
-       	<MetadataProvider type="XML" url="https://fed-db.us/idp/metadata/metadata-fed-db.xml" backingFilePath="/etc/shibboleth/metadata/metadata.xml"></MetadataProvider>
+       	<MetadataProvider type="XML" validate="true" url="https://metadata.fed-db.us/metadata.xml" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200">
+
+		<!-- Verify the signature on the metadata file -->
+	      <!--  <MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
+		<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/>
+
+	</MetadataProvider>
 
         <!-- Example of locally maintained metadata. -->
         <!--
