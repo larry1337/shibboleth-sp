@@ -1,7 +1,7 @@
 version: '2'
 services:
   si-sp:
-    container_name: "shibsp"
+    #container_name: "shibsp"
     build: ./si-sp/
     ports:
      - "443:443"
