@@ -70,7 +70,9 @@
 		#   when the CA certificates are directly appended to the server
 		#   certificate for convinience.
 		#SSLCertificateChainFile /etc/apache2/ssl.crt/server-ca.crt
-		SSLCertificateChainFile /etc/ssl/localcerts/chain.pem
+
+		# If you want non selfsigned-certificate you need this line
+		#SSLCertificateChainFile /etc/ssl/localcerts/chain.pem
 
 		#   Certificate Authority (CA):
 		#   Set the CA certificate verification path where to find CA

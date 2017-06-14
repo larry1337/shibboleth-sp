@@ -8,6 +8,7 @@ si-sp/iliasdata/
 si-sp/iliaslog/
 si-sp/shibboleth-logs/
 si-sp/localcerts/
+si-sp/sites-enabled/default-ssl.conf
 mysql-db/iliasdb/
 certificates-federations/
 
