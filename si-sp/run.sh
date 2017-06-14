@@ -3,8 +3,14 @@
 
 if [ ! -f "/etc/ssl/localcerts/sp-cert.pem" ]; then
 echo "Service-Provider cetificate does not exist. I will create a self-signed ceritficate for you."
-openssl req -nodes -newkey rsa:2048 -keyout sp-certkey.key -out sp-cert.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=sp.com"
+openssl req -nodes -newkey rsa:2048 -keyout sp-cert.key -out sp-cert.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=sp.com"
 fi
+
+if [ ! -f "/etc/ssl/localcerts/apache.pem" ]; then
+echo "Apache cetificate does not exist. I will create a self-signed ceritficate for you."
+openssl req -nodes -newkey rsa:2048 -keyout apache.key -out apache.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=apache.com"
+fi
+
 
 if [  ! -f "/etc/apache2/sites-enabled/default-ssl.conf" ]; then
 echo "Default apache configuration does not exist. I will copy it for you."

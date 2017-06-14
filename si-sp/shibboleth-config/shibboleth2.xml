@@ -130,7 +130,7 @@
         <!-- Simple file-based resolver for using a single keypair. -->
         <!-- <CredentialResolver type="File" key="sp-key.pem" certificate="sp-cert.pem"/> -->
 	<!-- #<CredentialResolver type="File" key="/etc/ssl/localcerts/apache.key" certificate="/etc/ssl/localcerts/apache.pem"/> -->
-        <CredentialResolver type="File" key="/etc/ssl/localcerts/sp-certkey.key" certificate="/etc/ssl/localcerts/sp-cert.pem"/>
+        <CredentialResolver type="File" key="/etc/ssl/localcerts/sp-cert.key" certificate="/etc/ssl/localcerts/sp-cert.pem"/>
 
 	<!--
         The default settings can be overridden by creating ApplicationOverride elements (see
