@@ -29,8 +29,6 @@ fi
 chown -R www-data:www-data /home/www-data/iliasdata
 chown -R www-data:www-data /var/log/iliaslog
 
-rm /var/www/html/ilias/ilias.ini.php
-
  service shibd start
  exec apache2 -DFOREGROUND
 #/usr/sbin/apache2ctl -D FOREGROUND
