@@ -16,7 +16,7 @@ services:
    # MAPPING FOR ILIAS
      - ./si-sp/ilias-config/iliasdata:/home/www-data/iliasdata
      - ./si-sp/ilias-config/ilias.ini.php:/var/www/html/ilias/ilias.ini.php
-     - ./si-sp/ilias-config/clientdata:/var/www/html/ilias/data/ilias
+     - ./si-sp/ilias-config/clientdata:/var/www/html/ilias/data/
      - ./si-sp/ilias-config/log:/var/log/iliaslog
   mysql-db:
     image: mysql:5.7
