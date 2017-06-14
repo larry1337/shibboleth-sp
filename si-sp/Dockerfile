@@ -131,15 +131,11 @@ RUN cd /var/www/html/eds \
 RUN chown www-data:www-data -R /var/www/html/eds
 
 # ###################################################################### #
-#                           PID FILE ERROR
+#                           RUN.SH
 # ###################################################################### #
 
 # Skript von Host-Sytsem auf Container kopieren + ausführbar machen
 COPY run.sh /bin/run.sh
 RUN chmod +x /bin/run.sh
-
-# Skript als erstes ausführen; PID-File wird gelöscht und Apache gestartet 
 CMD [ "/bin/run.sh" ]
 
-# Apache als Vordergrungprozess starten
-#ENTRYPOINT [ "/usr/sbin/apache2", "-DFOREGROUND" ]

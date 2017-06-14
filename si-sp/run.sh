@@ -3,12 +3,16 @@
 
 if [ ! -f "/etc/ssl/localcerts/sp-cert.pem" ]; then
 echo "Service-Provider cetificate does not exist. I will create a self-signed ceritficate for you."
-openssl req -nodes -newkey rsa:2048 -keyout sp-cert.key -out sp-cert.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=sp.com"
+openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
+    -subj "/C=US/ST=Denial/L=Heilbronn/O=Dis/CN=www.sp.com" \
+    -keyout /etc/ssl/localcerts/sp-cert.key -out /etc/ssl/localcerts/sp-cert.pem
 fi
 
 if [ ! -f "/etc/ssl/localcerts/apache.pem" ]; then
 echo "Apache cetificate does not exist. I will create a self-signed ceritficate for you."
-openssl req -nodes -newkey rsa:2048 -keyout apache.key -out apache.pem -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=apache.com"
+openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
+    -subj "/C=US/ST=Denial/L=Heilbronn/O=Dis/CN=www.apache.com" \
+    -keyout /etc/ssl/localcerts/apache.key -out /etc/ssl/localcerts/apache.pem
 fi
 
 
@@ -21,6 +25,11 @@ fi
 if [ -f "./run/apache2.pid" ]; then
 rm -f ./run/apache2.pid
 fi
+
+chown -R www-data:www-data /home/www-data/iliasdata
+chown -R www-data:www-data /var/log/iliaslog
+
+rm /var/www/html/ilias/ilias.ini.php
 
  service shibd start
  exec apache2 -DFOREGROUND

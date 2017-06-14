@@ -109,7 +109,7 @@
 
 		<!-- Verify the signature on the metadata file -->
 	      <!--  <MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
-		<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/>
+	<!--	<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
 
 	</MetadataProvider>
 

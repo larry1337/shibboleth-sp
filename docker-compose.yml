@@ -1,35 +1,26 @@
 version: '2'
 services:
-  si-sp:
-    #container_name: "shibsp"
+  si-sp:    
     build: ./si-sp/
     ports:
      - "443:443"
-    # - "80:80"
     volumes:
-    # MAPPING
-    # host directory:container directory
     # MAPPING FOR SHIBBOLETH
      - ./si-sp/localcerts:/etc/ssl/localcerts
-    # - ./si-sp/sites-available:/etc/apache2/sites-available
      - ./si-sp/shibboleth-config/shibboleth2.xml:/etc/shibboleth/shibboleth2.xml 
      - ./si-sp/shibboleth-config/attribute-map.xml:/etc/shibboleth/attribute-map.xml
      - ./si-sp/shibboleth-logs:/var/log/shibboleth 
+   # MAPPING FOR APACHE
+     - ./si-sp/apache/sites-enabled:/etc/apache2/sites-enabled
+     - ./si-sp/apache/php5/php.ini:/etc/php5/apache2/php.ini
    # MAPPING FOR ILIAS
-     - ./si-sp/sites-enabled:/etc/apache2/sites-enabled
-     - ./si-sp/php5/php.ini:/etc/php5/apache2/php.ini
-     - ./si-sp/iliasdata:/home/www-data/iliasdata
-     - ./si-sp/iliaslog:/var/log/iliaslog
-   # TO KEEP ILIAS INSTALLATION
+     - ./si-sp/ilias-config/iliasdata:/home/www-data/iliasdata
      - ./si-sp/ilias-config/ilias.ini.php:/var/www/html/ilias/ilias.ini.php
-     - ./si-sp/ilias-clientdata:/var/www/html/ilias/data/ilias
+     - ./si-sp/ilias-config/clientdata:/var/www/html/ilias/data/ilias
+     - ./si-sp/ilias-config/log:/var/log/iliaslog
   mysql-db:
     image: mysql:5.7
-   # ports:
-   #  - "3306:3306"
     volumes:
-    # MAPPING
-    # host directory:container directory
      - ./mysql-db/iliasdb:/var/lib/mysql
     environment:
      MYSQL_DATABASE: ilias
