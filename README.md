@@ -33,26 +33,26 @@ Do not worry, it will take a few minutes :wink:.
 	- **Step 1 - Database selection:** 
 	Should be: MySQL 5.5x or higher (InnoDB engine)
 
-- **Step 2 - Basic Data:** 
-Client ID: ilias
-Database Host: mysql-db
-Database Password: root
+	- **Step 2 - Basic Data:** 
+	Client ID: ilias
+	Database Host: mysql-db
+	Database Password: root
 
-- **Step 3 - Database:**
-Activate the Create Database checkbox
+	- **Step 3 - Database:**
+	Activate the Create Database checkbox
 
-- **Step 4 - Languages:**
-Choose your desired language
+	- **Step 4 - Languages:**
+	Choose your desired language
 
-- **Step 5 - Contact Information:**
-Fill up the required fields
+	- **Step 5 - Contact Information:**
+	Fill up the required fields
 
-- **Step 6 - Proxy:**
-If you have a proxy, you can do it here
+	- **Step 6 - Proxy:**
+	If you have a proxy, you can do it here
 
-- **Step 7 - Registration:**
- Skip the registration
+	- **Step 7 - Registration:**
+ 	Skip the registration
 
-- **Step 8 - Finish Setup:** 
-You're done :sunglasses:
+	- **Step 8 - Finish Setup:** 
+	You're done :sunglasses:
 
