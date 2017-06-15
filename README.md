@@ -55,4 +55,16 @@ Do not worry, it will take a few minutes :wink:.
 
 	- **Step 8 - Finish Setup:** 
 	You're done :sunglasses:
-
+<br><br>
+9. Log into Ilias with the root account
+<br><br>
+10. Navigate to Administration > Authentication and Registration and activate Shibboleth as default authentication mode. Save it.
+<br><br>
+11. Now go to the Shibboleth tab and make the following settings:
+	- Enable Shibboleth support
+	- Allow Local Authentication if you want to support the default Ilias login
+	- Unique Shibboleth attribute: HTTP_SHIB_UID
+	- Attribute for first name: HTTP_SHIB_FIRSTNAME
+	- Attribute for lastname: HTTP_SHIB_LASTNAME
+	- Attribute for e-mail address: HTTP_SHIB_EMAIL
+	- Attribute for street: HTTP_SHIB_STREET  
