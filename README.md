@@ -26,12 +26,12 @@ Do not worry, it will take a few minutes :wink:.
 6. Afterwards navigate to the following address in your browser: **yourdomain/setup/setup.php** <br>
 <sub>(Note: You have to trust the self-signed certificate)</sub>
 <br><br>
-7. Log into Ilias with the master-password:"homer"
+7. Log into Ilias with the master-password: "homer"
 <br><br>
 8. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps.
 
 	- **Step 1 - Database selection:** <br>
-	Should be: MySQL 5.5x or higher (InnoDB engine)
+	MySQL 5.5x or higher (InnoDB engine)<br>
 
 	- **Step 2 - Basic Data:** <br>
 	Client ID: "ilias"<br>
@@ -55,10 +55,10 @@ Do not worry, it will take a few minutes :wink:.
 
 	- **Step 8 - Finish Setup:**<br> 
 	You're done! :sunglasses:<br>
-<br><br>
+<br>
 9. Log into Ilias with the root account
 <br><br>
-10. Navigate to Administration > Authentication and Registration and activate Shibboleth as default authentication mode. Save it.
+10. Navigate to *Administration > Authentication and Registration* and activate Shibboleth as default authentication mode. Save it.
 <br><br>
 11. Now go to the Shibboleth tab and make the following settings:
 	- Enable Shibboleth support
