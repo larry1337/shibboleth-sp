@@ -30,8 +30,8 @@ Do not worry, it will take a few minutes :wink:.
 <br><br>
 8. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps.
 
-	+- **Step 1 - Database selection:** 
-	+Should be: MySQL 5.5x or higher (InnoDB engine)
+	- **Step 1 - Database selection:** 
+	Should be: MySQL 5.5x or higher (InnoDB engine)
 
 - **Step 2 - Basic Data:** 
 Client ID: ilias
