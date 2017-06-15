@@ -1,15 +1,18 @@
-# Shibboleth Service-Provider made with Docker
+# Shibboleth Service-Provider Dockerized
 
 The eLearning platform Ilias is used as a service in this context.
-
+The Dockerfile will create following things for you:
+- Shibboleth Service-Provider
+- Ilias Version 5.2
+- MySQL database
 
 ## Preconditions
-For the host system, I recommend using a virtual machine with Debian Jessy. In addition you will need Docker and Docker Compose on your host system. 
-Therefor you can use the [Docker Installation Guide](https://docs.docker.com/engine/installation/linux/debian/) and the [Compose Installation Guide](https://docs.docker.com/compose/install/).
+For the host system, I recommend using a virtual machine with Debian Jessy. In addition you will need **Docker**, **Docker Compose** and **Git** on your host system. 
+Therefor you can use the [Docker Installation Guide](https://docs.docker.com/engine/installation/linux/debian/), the [Compose Installation Guide](https://docs.docker.com/compose/install/) and this [How To Install Git on Debian 8 Guide](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-8).
 
 
 ## Getting Started
-1. Clone the repository on your host system
+1. Clone the repository on your host system: `git clone https://github.com/larry1337/shibboleth-sp.git` <br>
 <br><br>
 2. Navigate into the directory
 <br><br>
