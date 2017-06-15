@@ -10,25 +10,27 @@ Therefor you can use the [Docker Installation Guide](https://docs.docker.com/eng
 
 ## Getting Started
 1. Clone the repository on your host system
+<br><br>
 2. Navigate into the directory
+<br><br>
 3. There you can build the docker-image with the command: 
 ```bash
 docker-compose build 
 ```
 Do not worry, it will take a few minutes :wink:.
-
+<br><br>
 4. If the image has been built successfully, the following script must be executed once:
 ```bash
 ./init.sh                  
 ```
-
+<br><br>
 5. Now you can start the docker container on the previously built image: 
 ```bash
 docker-compose up
 ```
-
+<br><br>
 6. Afterwards navigate to the following address in your browser: domain/setup/setup.php
-
+<br><br>
 7. Log into Ilias with the master-password: homer
-
+<br><br>
 8. ... 
