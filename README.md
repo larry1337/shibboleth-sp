@@ -58,7 +58,7 @@ Do not worry, it will take a few minutes :wink:.
 <br>
 9. Log into Ilias with the root account
 <br><br>
-10. Navigate to *Administration > Authentication and Registration* and activate Shibboleth as default authentication mode. Save it.
+10. Navigate to Administration > Authentication and Registration and activate Shibboleth as default authentication mode. Save it.
 <br><br>
 11. Now go to the Shibboleth tab and make the following settings:
 	- Enable Shibboleth support
