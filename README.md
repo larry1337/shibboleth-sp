@@ -24,7 +24,7 @@ Do not worry, it will take a few minutes :wink:.
 5. Now you can start the docker container on the previously built image: `docker-compose up`
 <br><br>
 6. Afterwards navigate to the following address in your browser: **yourdomain/setup/setup.php** <br>
-<sub><sup>(Note: You have to trust the self-signed certificate)</sup></sub>
+<sub>(Note: You have to trust the self-signed certificate)</sub>
 <br><br>
 7. Log into Ilias with the master-password: **homer**
 <br><br>
