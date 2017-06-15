@@ -26,35 +26,35 @@ Do not worry, it will take a few minutes :wink:.
 6. Afterwards navigate to the following address in your browser: **yourdomain/setup/setup.php** <br>
 <sub>(Note: You have to trust the self-signed certificate)</sub>
 <br><br>
-7. Log into Ilias with the master-password: **homer**
+7. Log into Ilias with the master-password:"homer"
 <br><br>
 8. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps.
 
-	- **Step 1 - Database selection:** 
+	- **Step 1 - Database selection:** <br>
 	Should be: MySQL 5.5x or higher (InnoDB engine)
 
-	- **Step 2 - Basic Data:** 
-	Client ID: ilias
-	Database Host: mysql-db
-	Database Password: root
+	- **Step 2 - Basic Data:** <br>
+	Client ID: "ilias"<br>
+	Database Host: "mysql-db"<br>
+	Database Password: "root"<br>
 
-	- **Step 3 - Database:**
-	Activate the Create Database checkbox
+	- **Step 3 - Database:**<br>
+	Activate the "Create Database" checkbox<br>
 
-	- **Step 4 - Languages:**
-	Choose your desired language
+	- **Step 4 - Languages:**<br>
+	Choose your desired language<br>
 
-	- **Step 5 - Contact Information:**
-	Fill up the required fields
+	- **Step 5 - Contact Information:**<br>
+	Fill up the required fields<br>
 
-	- **Step 6 - Proxy:**
-	If you have a proxy, you can do it here
+	- **Step 6 - Proxy:**<br>
+	If you have a proxy, you can setup the Proxy configuration here.<br>
 
-	- **Step 7 - Registration:**
- 	Skip the registration
+	- **Step 7 - Registration:**<br>
+ 	Skip the registration<br>
 
-	- **Step 8 - Finish Setup:** 
-	You're done :sunglasses:
+	- **Step 8 - Finish Setup:**<br> 
+	You're done! :sunglasses:<br>
 <br><br>
 9. Log into Ilias with the root account
 <br><br>
