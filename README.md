@@ -12,7 +12,7 @@ Therefor you can use the [Docker Installation Guide](https://docs.docker.com/eng
 <br><br>
 
 ## Getting Started
-1. Clone the repository on your host system: `git clone https://github.com/larry1337/shibboleth-sp.git` <br>
+1. Clone the repository on your host system: `git clone https://github.com/larry1337/shibboleth-sp.git`
 <br><br>
 2. Navigate into the directory
 <br><br>
@@ -24,35 +24,35 @@ Do not worry, it will take a few minutes :wink:.
 5. Now you can start the docker container on the previously built image: `docker-compose up`
 <br><br>
 6. Afterwards navigate to the following address in your browser: **yourdomain/setup/setup.php** <br>
-Note: You have to trust the self-signed certificate
+<sub><sup>(Note: You have to trust the self-signed certificate)</sup></sub>
 <br><br>
 7. Log into Ilias with the master-password: **homer**
 <br><br>
 8. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps.
-<br><br>
-- Step 1 - Database selection: 
+
+- **Step 1 - Database selection:** 
 Should be: MySQL 5.5x or higher (InnoDB engine)
 
-- Step 2 - Basic Data: 
+- **Step 2 - Basic Data:** 
 Client ID: ilias
 Database Host: mysql-db
 Database Password: root
 
-- Step 3 - Database:
+- **Step 3 - Database:**
 Activate the Create Database checkbox
 
-- Step 4 - Languages:
+- **Step 4 - Languages:**
 Choose your desired language
 
-- Step 5 - Contact Information:
+- **Step 5 - Contact Information:**
 Fill up the required fields
 
-- Step 6 - Proxy:
+- **Step 6 - Proxy:**
 If you have a proxy, you can do it here
 
-- Step 7 - Registration:
+- **Step 7 - Registration:**
  Skip the registration
 
-- Step 8 - Finish Setup: 
+- **Step 8 - Finish Setup:** 
 You're done :sunglasses:
 
