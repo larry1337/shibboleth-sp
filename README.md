@@ -56,7 +56,7 @@ Do not worry, it will take a few minutes :wink:.
 	- **Step 8 - Finish Setup:**<br> 
 	You're done! :sunglasses:<br>
 <br>
-9. Log into Ilias with the root account
+9. Log into Ilias with the root account, password: "homer". Make sure to change the password after installation. Everybody knows it.
 <br><br>
 10. Navigate to Administration > Authentication and Registration and activate Shibboleth as default authentication mode. Save it.
 <br><br>
