@@ -1,7 +1,7 @@
 # Dockerized Shibboleth Service-Provider
 
-The eLearning platform Ilias is used as a service in this context.
-The Dockerfile will create following things for you:
+## Included
+- Apache as Webserver 
 - Shibboleth Service-Provider
 - Ilias Version 5.2
 - MySQL database
