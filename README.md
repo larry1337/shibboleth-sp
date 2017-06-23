@@ -28,8 +28,7 @@ Do not worry, it will take a few minutes :wink:.
 <br><br>
 7. Log into Ilias with the master-password: "homer"
 <br><br>
-8. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps.
-
+8. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps:
 	- **Step 1 - Database selection:** <br>
 	MySQL 5.5x or higher (InnoDB engine)<br>
 
@@ -56,16 +55,22 @@ Do not worry, it will take a few minutes :wink:.
 	- **Step 8 - Finish Setup:**<br> 
 	You're done! :sunglasses:<br>
 <br>
-9. Log into Ilias with the root account, password: "homer". Make sure to change the password after installation. Everybody knows it.
+9. Log into Ilias with the root account, password: "homer". Make sure to change the password after installation.
 <br><br>
-10. Navigate to Administration > Authentication and Registration and activate Shibboleth as default authentication mode. Save it.
+10. Navigate to *Administration* > *Authentication and Registration* and activate Shibboleth as default authentication mode. Save it.
 <br><br>
 11. Now go to the Shibboleth tab and make the following settings:
 
-	- Enable Shibboleth support
-	- Allow Local Authentication if you want to support the default Ilias login
-	- Unique Shibboleth attribute: HTTP_SHIB_UID
-	- Attribute for first name: HTTP_SHIB_FIRSTNAME
-	- Attribute for lastname: HTTP_SHIB_LASTNAME
-	- Attribute for e-mail address: HTTP_SHIB_EMAIL
-	- Attribute for street: HTTP_SHIB_STREET  
+- Enable Shibboleth support<br>
+	
+- Allow Local Authentication if you want to support the default Ilias login<br>
+	
+- Unique Shibboleth attribute: HTTP_SHIB_UID<br>
+	
+- Attribute for first name: HTTP_SHIB_FIRSTNAME<br>
+	
+- Attribute for lastname: HTTP_SHIB_LASTNAME<br>
+	
+- Attribute for e-mail address: HTTP_SHIB_EMAIL<br>
+	
+- Attribute for street: HTTP_SHIB_STREET<br>
