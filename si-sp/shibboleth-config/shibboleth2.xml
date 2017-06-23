@@ -20,7 +20,7 @@
     -->
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
-    <ApplicationDefaults entityID="https://sp1.fed-lr.us"
+    <ApplicationDefaults entityID="https://sp1.fed-db.us"
                          REMOTE_USER="eppn persistent-id targeted-id"
                          cipherSuites="ECDHE+AESGCM:ECDHE:!aNULL:!eNULL:!LOW:!EXPORT:!RC4:!SHA:!SSLv2">
 
@@ -42,26 +42,43 @@
             (Set discoveryProtocol to "WAYF" for legacy Shibboleth WAYF support.)
             You can also override entityID on /Login query string, or in RequestMap/htaccess.
             
-            <SSO entityID="https://idp.example.org/idp/shibboleth"
-                 discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
-              SAML2 SAML1
+	    <SSO entityID="https://idp.example.org/idp/shibboleth" discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
+		SAML2 SAML1
+	    </SSO>
+	    -->
+		
+	    <!--	
+	    <SSO entityID="https://idp2.fed-db.us/idp/shibboleth"
+                discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
+                SAML2 SAML1
             </SSO>
 	    -->
 
-	 <!--   <SSO entityID="https://idp1.fed-db.us/idp/shibboleth"
-                  discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
-                  SAML2 SAML1
-           </SSO> -->
+	    <!-- FOR SZENARIO A + D  -->
+            <!--    
+	    <SSO entityID="https://idp2.fed-db.us/idp/shibboleth">
+                 SAML2 SAML1
+            </SSO>
+            -->
 
-	<SSO discoveryProtocol="SAMLDS" discoveryURL="https://sp1.fed-lr.us/eds/">
+            <!-- FOR SZENARIO B  -->
+            <!--
+	    <SSO discoveryProtocol="SAMLDS" discoveryURL="https://sp2.fed-db.us/eds/">
+                 SAML2 SAML1
+            </SSO>
+	    -->
+
+	    <!-- FOR SZENARIO C -->	
+	    <SSO discoveryProtocol="SAMLDS" discoveryURL="https://sp1.fed-db.us/eds/">
    		SAML2 SAML1
-	</SSO>
+	    </SSO>
 
             <!-- SAML and local-only logout. -->
             <Logout>SAML2 Local</Logout>
             
+	    <!-- NOT FOR PRODUCTION ENVIROMENT - ONLY FOR TESTING -->
             <!-- Extension service that generates "approximate" metadata based on SP configuration. -->
-            <Handler type="MetadataGenerator" Location="/Metadata" signing="false"/>
+            <Handler type="MetadataGenerator" Location="/Metadata" signing="true"/>
 
             <!-- Status reporting service. -->
             <Handler type="Status" Location="/Status" acl="127.0.0.1 ::1"/>
@@ -103,16 +120,28 @@
         </MetadataProvider>
         -->
 
-       <!--  <MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider> -->
+        <!--  
+	<MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider> 
+	-->
+	
+	<!-- FOR SZENARIO A+ D -->
+        <!--
+        <MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
+        -->
 
+	<!-- FOR SZENARIO B  -->
+         <!--
+        <MetadataProvider type="XML" validate="true" legacyOrgNames="true" uri="https://idp2.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata_idp2.xml" reloadInter$
+        <MetadataProvider type="XML" validate="true" legacyOrgNames="true" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata_idp1.xml" reloadInter$
+        -->
+		
+	<!-- FOR SZENARIO C -->
        	<MetadataProvider type="XML" validate="true" url="https://metadata.fed-db.us/metadata.xml" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200">
-
 		<!-- Verify the signature on the metadata file -->
-	      <!--  <MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
-	<!--	<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
-
-	</MetadataProvider>
-
+	      	<!--  <MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
+		<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> 
+	 </MetadataProvider>
+		
         <!-- Example of locally maintained metadata. -->
         <!--
         <MetadataProvider type="XML" validate="true" file="partner-metadata.xml"/>
