@@ -74,6 +74,8 @@
     <Attribute name="urn:mace:dir:attribute-def:street" id="HTTP_SHIB_STREET"/>
     <Attribute name="urn:oid:2.5.4.9" id="HTTP_SHIB_STREET"/>
 
+    <Attribute name="urn:mace:dir:attribute-def:eduPersonAffiliation" id="HTTP_SHIB_AFFILIATION"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.5923.1.1.1.1" id="HTTP_SHIB_AFFILIATION"/>
 
     <!-- Some more eduPerson attributes, uncomment these to use them... -->
     <!--
