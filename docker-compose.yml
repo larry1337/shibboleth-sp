@@ -18,6 +18,7 @@ services:
      - ./si-sp/ilias-config/ilias.ini.php:/var/www/html/ilias/ilias.ini.php
      - ./si-sp/ilias-config/clientdata:/var/www/html/ilias/data/
      - ./si-sp/ilias-config/log:/var/log/iliaslog
+     - ./si-sp/ilias-config/data-manipulation.php:/var/www/html/ilias/data-manipulation.php
   mysql-db:
     image: mysql:5.7
     volumes:

@@ -22,7 +22,8 @@
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
     <ApplicationDefaults entityID="https://sp1.fed-db.us"
                          REMOTE_USER="eppn persistent-id targeted-id"
-                         cipherSuites="ECDHE+AESGCM:ECDHE:!aNULL:!eNULL:!LOW:!EXPORT:!RC4:!SHA:!SSLv2">
+                         cipherSuites="ECDHE+AESGCM:ECDHE:!aNULL:!eNULL:!LOW:!EXPORT:!RC4:!SHA:!SSLv2"
+			 encryption="true">
 
         <!--
         Controls session lifetimes, address checks, cookie handling, and the protocol handlers.
@@ -78,7 +79,7 @@
             
 	    <!-- NOT FOR PRODUCTION ENVIROMENT - ONLY FOR TESTING -->
             <!-- Extension service that generates "approximate" metadata based on SP configuration. -->
-            <Handler type="MetadataGenerator" Location="/Metadata" signing="true"/>
+            <Handler type="MetadataGenerator" Location="/Metadata" signing="false"/>
 
             <!-- Status reporting service. -->
             <Handler type="Status" Location="/Status" acl="127.0.0.1 ::1"/>
@@ -140,6 +141,19 @@
 		<!-- Verify the signature on the metadata file -->
 	      	<!--  <MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
 		<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> 
+
+		 <!-- FOR SZENARIO E -->
+		<!--		 	
+		<MetadataFilter type="Whitelist">
+                         <Include>https://idp2.fed-db.us/idp/shibboleth</Include>
+                </MetadataFilter>
+		-->
+		 <!-- FOR SZENARIO F -->
+		<!--
+		<MetadataFilter type="Blacklist">
+    			 <Exclude>https://idp1.fed-db.us/idp/shibboleth</Exclude>
+		</MetadataFilter>
+		-->
 	 </MetadataProvider>
 		
         <!-- Example of locally maintained metadata. -->

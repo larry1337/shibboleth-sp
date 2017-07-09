@@ -29,6 +29,7 @@ fi
 chown -R www-data:www-data /home/www-data/iliasdata
 chown -R www-data:www-data /var/log/iliaslog
 chown -R www-data:www-data /var/www/html/ilias/data/
+chown -R www-data:www-data /var/www/html/ilias/data-manipulation.php
 
  service shibd start
  exec apache2 -DFOREGROUND
