@@ -12,24 +12,23 @@ Therefor you can use the [Docker Installation Guide](https://docs.docker.com/eng
 <br><br>
 
 ## Getting Started
-1. Clone the repository on your host system: `git clone https://github.com/larry1337/shibboleth-sp.git`
+1. Open the console and clone the repository on your host system: `git clone https://github.com/larry1337/shibboleth-sp.git`
 <br><br>
-2. Navigate into the directory
-<br><br>
-3. There you can build the docker-image with the command: `docker-compose build`<br>
+2. Navigate into the directory. There you can build the docker-image with the command: `docker-compose build`<br>
 Do not worry, it will take a few minutes :wink:.
 <br><br>
-4. If the image has been built successfully, the following script must be executed once: `./init.sh`<br>
+3. If the image has been built successfully, the following script must be executed once: `./init.sh`<br>
 It is ok if some directories were not found.
 <br><br>
-5. Now you can start the docker container on the previously built image: `docker-compose up`
+4. Now you can start the docker container on the previously built image: `docker-compose up`<br>
+You will see some messages. Thats fine. 
 <br><br>
-6. Afterwards navigate to the following address in your browser: **yourdomain/setup/setup.php** <br>
+5. Afterwards navigate to the following address in your browser: **yourdomain/setup/setup.php** <br>
 <sub>(Note: You have to trust the self-signed certificate)</sub>
 <br><br>
-7. Log into Ilias with the master-password: "homer"
+6. Log into Ilias with the master-password: "homer"
 <br><br>
-8. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps:
+7. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps:
 	- **Step 1 - Database selection:** <br>
 	MySQL 5.5x or higher (InnoDB engine)<br>
 
@@ -56,11 +55,11 @@ It is ok if some directories were not found.
 	- **Step 8 - Finish Setup:**<br> 
 	You're done! :sunglasses:<br>
 <br>
-9. Log into Ilias with the root account, password: "homer". Make sure to change the password after installation.
+8. Log into Ilias with the root account, password: "homer". Make sure to change the password after installation.
 <br><br>
-10. Navigate to *Administration* > *Authentication and Registration* and activate Shibboleth as default authentication mode. Save it.
+9. Navigate to *Administration* > *Authentication and Registration* and activate Shibboleth as default authentication mode. Save it.
 <br><br>
-11. Now go to the Shibboleth tab and make the following settings:
+10. Now go to the Shibboleth tab and make the following settings:
 
 - Enable Shibboleth support<br>
 	
