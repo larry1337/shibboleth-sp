@@ -21,7 +21,7 @@ Do not worry, it will take a few minutes :wink:.
 It is ok if some directories were not found.
 <br><br>
 4. Now you can start the docker container on the previously built image: `docker-compose up`<br>
-You will see some messages. Thats fine. 
+You will see some messages. That's fine. 
 <br><br>
 5. Afterwards navigate to the following address in your browser: **yourdomain/setup/setup.php** <br>
 <sub>(Note: You have to trust the self-signed certificate)</sub>
