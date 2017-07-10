@@ -19,7 +19,8 @@ Therefor you can use the [Docker Installation Guide](https://docs.docker.com/eng
 3. There you can build the docker-image with the command: `docker-compose build`<br>
 Do not worry, it will take a few minutes :wink:.
 <br><br>
-4. If the image has been built successfully, the following script must be executed once: `./init.sh`
+4. If the image has been built successfully, the following script must be executed once: `./init.sh`<br>
+It is ok if some directories were not found.
 <br><br>
 5. Now you can start the docker container on the previously built image: `docker-compose up`
 <br><br>
