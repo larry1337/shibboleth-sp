@@ -31,7 +31,7 @@ You will see some messages. That's fine.
 <sub>(Note: You have to trust the self-signed certificate)</sub>
 <br>
 
-6. Log into Ilias with the master-password: "homer"
+6. Log into Ilias with the master-password: "homer"<br>
 <br>
 
 7. You will see the Ilias setup page with the List of Clients. Now we need a new client. Therefore press the blue button "Create New Client" and follow the setup steps:
@@ -62,7 +62,7 @@ You will see some messages. That's fine.
 
 	- **Step 8 - Finish Setup:**<br> 
 	You're done with the setup! :sunglasses:<br>
-
+<br>
 
 8. Log into Ilias with the root account, password: "homer". Make sure to change the password after installation.
 <br>
