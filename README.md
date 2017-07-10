@@ -70,7 +70,7 @@ You will see some messages. That's fine.
 9. Navigate to **_Administration > Authentication and Registration_** and activate Shibboleth as default authentication mode. Save it.
 <br>
 
-10. Now go to the Shibboleth tab and make the following settings:
+10. Now go to the **_Shibboleth_** tab and make the following settings:
 
 - Enable Shibboleth support<br>
 	
