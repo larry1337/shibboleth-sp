@@ -83,6 +83,4 @@ You will see some messages. That's fine.
 - Attribute for lastname: HTTP_SHIB_LASTNAME<br>
 	
 - Attribute for e-mail address: HTTP_SHIB_EMAIL<br>
-	
-- Attribute for street: HTTP_SHIB_STREET<br>
 
