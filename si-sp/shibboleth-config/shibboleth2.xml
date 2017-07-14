@@ -143,11 +143,11 @@
 		<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> 
 
 		 <!-- FOR SZENARIO E -->
-		<!--		 	
+						 	
 		<MetadataFilter type="Whitelist">
                          <Include>https://idp2.fed-db.us/idp/shibboleth</Include>
                 </MetadataFilter>
-		-->
+	
 		 <!-- FOR SZENARIO F -->
 		<!--
 		<MetadataFilter type="Blacklist">
