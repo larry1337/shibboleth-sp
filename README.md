@@ -1,8 +1,8 @@
-# Dockerized Shibboleth Service-Provider
+# Dockerized Shibboleth Service Provider
 
 ## Included
 - Apache as Webserver 
-- Shibboleth Service-Provider
+- Shibboleth Service Provider 2.6
 - Ilias Version 5.2
 - MySQL database
 
