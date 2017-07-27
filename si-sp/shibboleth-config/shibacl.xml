@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AccessControl type="edu.internet2.middleware.shibboleth.sp.provider.XMLAccessControl">
+ <OR>
+      <Rule require="ILIAS_SHIB_AFFILIATION">student</Rule>
+      <Rule require="ILIAS_SHIB_AFFILIATION">professor</Rule>
+      <Rule require="ILIAS_SHIB_AFFILIATION">guest</Rule>
+      <Rule require="ILIAS_SHIB_AFFILIATION">faculty-it</Rule>
+      <Rule require="ILIAS_SHIB_AFFILIATION">employee</Rule>
+ </OR>
+
+</AccessControl>

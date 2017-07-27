@@ -9,6 +9,7 @@ services:
      - ./si-sp/localcerts:/etc/ssl/localcerts
      - ./si-sp/shibboleth-config/shibboleth2.xml:/etc/shibboleth/shibboleth2.xml 
      - ./si-sp/shibboleth-config/attribute-map.xml:/etc/shibboleth/attribute-map.xml
+     - ./si-sp/shibboleth-config/shibacl.xml:/var/www/html/ilias/shibacl.xml
      - ./si-sp/shibboleth-logs:/var/log/shibboleth 
    # MAPPING FOR APACHE
      - ./si-sp/apache/sites-enabled:/etc/apache2/sites-enabled

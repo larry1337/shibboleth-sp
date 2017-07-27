@@ -5,6 +5,7 @@
     xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
     clockSkew="180">
 
+
     <!--
     By default, in-memory StorageService, ReplayCache, ArtifactMap, and SessionCache
     are used. See example-shibboleth2.xml for samples of explicitly configuring them.
@@ -18,6 +19,23 @@
     For examples with the RequestMap XML syntax instead, see the example-shibboleth2.xml
     file, and the https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPRequestMapHowTo topic.
     -->
+    <!--	
+    <RequestMapper type="Native">
+     <RequestMap applicationId="default">
+       <Host name="https://sp1.fed-db.us">
+         <Path name="shib_login.php" authType="shibboleth" requireSession="true">
+           <AccessControl>
+                <AND>
+                        <RuleRegex require="ILIAS_SHIB_AFFILIATION">/\bstudent\b/i</RuleRegex>
+                        <RuleRegex require="ILIAS_SHIB_AFFILIATION">/\bstudent\b/i</RuleRegex>
+                </AND>
+           </AccessControl>
+          </Path>
+        </Host>
+     </RequestMap>
+    </RequestMapper>
+    -->
+
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
     <ApplicationDefaults entityID="https://sp1.fed-db.us"
@@ -188,7 +206,7 @@
         <ApplicationOverride id="admin" entityID="https://admin.example.org/shibboleth"/>
         -->
     </ApplicationDefaults>
-    
+
     <!-- Policies that determine how to process and authenticate runtime messages. -->
     <SecurityPolicyProvider type="XML" validate="true" path="security-policy.xml"/>
 
