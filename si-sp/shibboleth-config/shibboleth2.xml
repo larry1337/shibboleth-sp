@@ -40,7 +40,7 @@
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
     <ApplicationDefaults entityID="https://sp1.fed-db.us"
                          REMOTE_USER="eppn persistent-id targeted-id"
-                         cipherSuites="ECDHE+AESGCM:ECDHE:!aNULL:!eNULL:!LOW:!EXPORT:!RC4:!SHA:!SSLv2"
+			 signing="true"
 			 encryption="true">
 
         <!--
@@ -145,7 +145,7 @@
 	
 	<!-- FOR SZENARIO A+ D -->
         <!--
-        <MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
+        <MetadataProvider type="XML"  validate="true" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
         -->
 
 	<!-- FOR SZENARIO B  -->
