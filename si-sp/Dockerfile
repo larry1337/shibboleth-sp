@@ -49,7 +49,7 @@ RUN FINGERPRINT="$(gpg --with-fingerprint SWITCHaai-swdistrib.asc | sed -n 2p | 
 && echo "RECEIVED FINGERPRINT:   ${FINGERPRINT}" \
 && if [ ${FINGERPRINT} != $REPOSITORY_FINGERPRINT_KEY ]; then echo "Warning! Wrong GPG fingerprint!" && exit 1; fi
 
-# Repository-Key hinzufügen
+# Repository Key hinzufügen
 RUN apt-key add SWITCHaai-swdistrib.asc
 
 # Repository hinzufügen
@@ -57,10 +57,10 @@ RUN echo 'deb http://pkg.switch.ch/switchaai/debian jessie main' | tee /etc/apt/
 && apt-get update
 
 # ###################################################################### #
-#                       SHIBBOLETH SERVICE-PROVIDER
+#                       SHIBBOLETH SERVICE PROVIDER
 # ###################################################################### #
 
-# Shibboleth Service-Provider installieren
+# Shibboleth Service Provider installieren
 RUN apt-get install -y --install-recommends shibboleth
 
 # Verzeichnis für Metadata Backing-Path
@@ -118,7 +118,7 @@ RUN chown www-data:www-data -R /var/log/iliaslog
 # Neues Verzeichnis erstellen
 RUN cd /var/www/html && mkdir eds
 
-# Distribution runterladen, entpacken und in "eds"-Verzeichnis kopieren
+# Distribution herunterladen, entpacken und in "eds"-Verzeichnis kopieren
 RUN cd /var/www/html/eds \
 && curl -O https://shibboleth.net/downloads/embedded-discovery-service/latest/shibboleth-embedded-ds-1.2.0.tar.gz \
 && tar -xvzf shibboleth-embedded-ds-1.2.0.tar.gz -C ./ \

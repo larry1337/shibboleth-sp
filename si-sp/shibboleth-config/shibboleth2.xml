@@ -15,27 +15,7 @@
     To customize behavior for specific resources on Apache, and to link vhosts or
     resources to ApplicationOverride settings below, use web server options/commands.
     See https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPConfigurationElements for help.
-    
-    For examples with the RequestMap XML syntax instead, see the example-shibboleth2.xml
-    file, and the https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPRequestMapHowTo topic.
-    -->
-    <!--	
-    <RequestMapper type="Native">
-     <RequestMap applicationId="default">
-       <Host name="https://sp1.fed-db.us">
-         <Path name="shib_login.php" authType="shibboleth" requireSession="true">
-           <AccessControl>
-                <AND>
-                        <RuleRegex require="ILIAS_SHIB_AFFILIATION">/\bstudent\b/i</RuleRegex>
-                        <RuleRegex require="ILIAS_SHIB_AFFILIATION">/\bstudent\b/i</RuleRegex>
-                </AND>
-           </AccessControl>
-          </Path>
-        </Host>
-     </RequestMap>
-    </RequestMapper>
-    -->
-
+    -->    
 
     <!-- The ApplicationDefaults element is where most of Shibboleth's SAML bits are defined. -->
     <ApplicationDefaults entityID="https://sp1.fed-db.us"
@@ -53,49 +33,32 @@
         security of your site. Stealing sessions via cookie theft is much easier with this disabled.
         -->
         <Sessions lifetime="28800" timeout="3600" relayState="ss:mem"
-                  checkAddress="false" handlerSSL="true" cookieProps="https">
+                  checkAddress="false" consistentAddress="true" handlerSSL="true" cookieProps="https">
 
             <!--
             Configures SSO for a default IdP. To allow for >1 IdP, remove
             entityID property and adjust discoveryURL to point to discovery service.
             (Set discoveryProtocol to "WAYF" for legacy Shibboleth WAYF support.)
             You can also override entityID on /Login query string, or in RequestMap/htaccess.
+	    -->    
+
+	    <!-- ONLY ONE IDP - FOR SZENARIO A/D  -->    
+	    <SSO entityID="https://idp1.fed-db.us/idp/shibboleth">
+                 SAML2 SAML1
+            </SSO>
             
-	    <SSO entityID="https://idp.example.org/idp/shibboleth" discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
-		SAML2 SAML1
-	    </SSO>
-	    -->
-		
+
+	    <!-- MORE THAN ONE IDP - FOR SZENARIO B/C/E/F/G/H -->
 	    <!--	
-	    <SSO entityID="https://idp2.fed-db.us/idp/shibboleth"
-                discoveryProtocol="SAMLDS" discoveryURL="https://ds.example.org/DS/WAYF">
-                SAML2 SAML1
-            </SSO>
-	    -->
-
-	    <!-- FOR SZENARIO A + D  -->
-            <!--    
-	    <SSO entityID="https://idp2.fed-db.us/idp/shibboleth">
-                 SAML2 SAML1
-            </SSO>
-            -->
-
-            <!-- FOR SZENARIO B  -->
-            <!--
-	    <SSO discoveryProtocol="SAMLDS" discoveryURL="https://sp2.fed-db.us/eds/">
-                 SAML2 SAML1
-            </SSO>
-	    -->
-
-	    <!-- FOR SZENARIO C -->	
 	    <SSO discoveryProtocol="SAMLDS" discoveryURL="https://sp1.fed-db.us/eds/">
    		SAML2 SAML1
 	    </SSO>
+	    -->
 
             <!-- SAML and local-only logout. -->
             <Logout>SAML2 Local</Logout>
             
-	    <!-- NOT FOR PRODUCTION ENVIROMENT - ONLY FOR TESTING -->
+	    <!-- NOT FOR PRODUCTION ENVIRONMENT - ONLY FOR TESTING -->
             <!-- Extension service that generates "approximate" metadata based on SP configuration. -->
             <Handler type="MetadataGenerator" Location="/Metadata" signing="false"/>
 
@@ -124,60 +87,46 @@
 	</TrustEngine>
         
 
-
-        <!-- Example of remotely supplied batch of signed metadata. -->
-        <!--
-        <MetadataProvider type="XML" validate="true"
-	      uri="http://example.org/federation-metadata.xml"
-              backingFilePath="federation-metadata.xml" reloadInterval="7200">
-            <MetadataFilter type="RequireValidUntil" maxValidityInterval="2419200"/>
-            <MetadataFilter type="Signature" certificate="fedsigner.pem"/>
-            <DiscoveryFilter type="Blacklist" matcher="EntityAttributes" trimTags="true" 
-              attributeName="http://macedir.org/entity-category"
-              attributeNameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"
-              attributeValue="http://refeds.org/category/hide-from-discovery" />
-        </MetadataProvider>
-        -->
-
-        <!--  
-	<MetadataProvider type="XML" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider> 
-	-->
-	
-	<!-- FOR SZENARIO A+ D -->
-        <!--
+	<!-- FOR SZENARIO A/D -->
         <MetadataProvider type="XML"  validate="true" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200"></MetadataProvider>
-        -->
+   
 
-	<!-- FOR SZENARIO B  -->
-         <!--
-        <MetadataProvider type="XML" validate="true" legacyOrgNames="true" uri="https://idp2.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata_idp2.xml" reloadInter$
-        <MetadataProvider type="XML" validate="true" legacyOrgNames="true" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata_idp1.xml" reloadInter$
+	<!-- FOR SZENARIO B -->
+        <!--
+        <MetadataProvider type="XML" validate="true" uri="https://idp2.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata_idp2.xml" reloadInter$
+        <MetadataProvider type="XML" validate="true" uri="https://idp1.fed-db.us/idp/shibboleth" backingFilePath="/etc/shibboleth/metadata/metadata_idp1.xml" reloadInter$
         -->
 		
-	<!-- FOR SZENARIO C -->
+	<!-- FOR SZENARIO C/H -->
+        <!--
        	<MetadataProvider type="XML" validate="true" url="https://metadata.fed-db.us/metadata.xml" backingFilePath="/etc/shibboleth/metadata/metadata.xml" reloadInterval="7200">
+	-->
 		<!-- Verify the signature on the metadata file -->
-	      	<!--  <MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> -->
+		<!--
 		<MetadataFilter type="Signature" certificate="/etc/ssl/localcerts/fed-db.pem"/> 
+		-->
+			
+		<!-- Require validUntil of no more than 7 days -->
+		<!--
+		<MetadataFilter type="RequireValidUntil" maxValidityInterval="604800"/>
+		-->
 
-		 <!-- FOR SZENARIO E -->
-						 	
+		<!-- FOR SZENARIO E -->
+		<!--				 	
 		<MetadataFilter type="Whitelist">
                          <Include>https://idp2.fed-db.us/idp/shibboleth</Include>
                 </MetadataFilter>
-	
-		 <!-- FOR SZENARIO F -->
+		-->
+		
+		<!-- FOR SZENARIO F -->
 		<!--
 		<MetadataFilter type="Blacklist">
     			 <Exclude>https://idp1.fed-db.us/idp/shibboleth</Exclude>
 		</MetadataFilter>
 		-->
+	 <!--
 	 </MetadataProvider>
-		
-        <!-- Example of locally maintained metadata. -->
-        <!--
-        <MetadataProvider type="XML" validate="true" file="partner-metadata.xml"/>
-        -->
+	 -->	
 
         <!-- Map to extract attributes from SAML assertions. -->
         <AttributeExtractor type="XML" validate="true" reloadChanges="false" path="attribute-map.xml"/>
